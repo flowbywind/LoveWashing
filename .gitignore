@@ -1,0 +1,12 @@
+*.mdf
+*.ldf
+*/bin/*
+*/obj/*
+
+
+# Generated files
+bin/
+gen/
+
+# Log Files
+*.log

@@ -1,0 +1,17 @@
+﻿@model Love.Washing.WebUI.Models.ViewModel.UEditorViewModel
+@{ 
+    Layout = null;
+ } 
+<div  id="@Model.ID" name="@Model.Name"></div>
+<script type="text/javascript">
+
+    $(function(){
+        UE.getEditor('@Model.ID');
+        var content = '@Html.Raw(Model.Content)';
+        if(content){
+            UE.getEditor('@Model.ID').ready(function(){
+                UE.getEditor('@Model.ID').setContent(content);
+            });
+        }
+    });
+</script>

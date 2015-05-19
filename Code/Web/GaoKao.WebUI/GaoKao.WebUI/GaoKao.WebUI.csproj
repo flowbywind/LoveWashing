@@ -1,0 +1,1701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34306D5E-A186-45D3-890C-6D7B63F4B3B8}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GaoKao.WebUI</RootNamespace>
+    <AssemblyName>GaoKao.WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\CommonData.cs" />
+    <Compile Include="Common\EnumClass.cs" />
+    <Compile Include="Common\ExtensionMethod.cs" />
+    <Compile Include="Common\ImageHeader.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BackgroundQuestionController.cs" />
+    <Compile Include="Controllers\ExamPaperController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InterfaceController.cs" />
+    <Compile Include="Controllers\KnowledgeController.cs" />
+    <Compile Include="Controllers\QuestionController.cs" />
+    <Compile Include="Controllers\QuestionGroupController.cs" />
+    <Compile Include="Controllers\UEditorController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503061450399_addquestionitem.cs" />
+    <Compile Include="Migrations\201503061450399_addquestionitem.Designer.cs">
+      <DependentUpon>201503061450399_addquestionitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503070553458_addquestion.cs" />
+    <Compile Include="Migrations\201503070553458_addquestion.Designer.cs">
+      <DependentUpon>201503070553458_addquestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503101518254_addvalidate.cs" />
+    <Compile Include="Migrations\201503101518254_addvalidate.Designer.cs">
+      <DependentUpon>201503101518254_addvalidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503141419385_addbackgroundnull.cs" />
+    <Compile Include="Migrations\201503141419385_addbackgroundnull.Designer.cs">
+      <DependentUpon>201503141419385_addbackgroundnull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503161415321_editquesitonid.cs" />
+    <Compile Include="Migrations\201503161415321_editquesitonid.Designer.cs">
+      <DependentUpon>201503161415321_editquesitonid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503161427133_addquestionitem1.cs" />
+    <Compile Include="Migrations\201503161427133_addquestionitem1.Designer.cs">
+      <DependentUpon>201503161427133_addquestionitem1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503171516512_dictionarytime.cs" />
+    <Compile Include="Migrations\201503171516512_dictionarytime.Designer.cs">
+      <DependentUpon>201503171516512_dictionarytime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503171521055_adddictionarytimes.cs" />
+    <Compile Include="Migrations\201503171521055_adddictionarytimes.Designer.cs">
+      <DependentUpon>201503171521055_adddictionarytimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503171528455_addmydictionarygrouptimesss.cs" />
+    <Compile Include="Migrations\201503171528455_addmydictionarygrouptimesss.Designer.cs">
+      <DependentUpon>201503171528455_addmydictionarygrouptimesss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503171531359_addtestwhatwrong.cs" />
+    <Compile Include="Migrations\201503171531359_addtestwhatwrong.Designer.cs">
+      <DependentUpon>201503171531359_addtestwhatwrong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503171534206_addmydictionitem.cs" />
+    <Compile Include="Migrations\201503171534206_addmydictionitem.Designer.cs">
+      <DependentUpon>201503171534206_addmydictionitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503171535553_addtestcreatetimes.cs" />
+    <Compile Include="Migrations\201503171535553_addtestcreatetimes.Designer.cs">
+      <DependentUpon>201503171535553_addtestcreatetimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503181452090_addmodifitime.cs" />
+    <Compile Include="Migrations\201503181452090_addmodifitime.Designer.cs">
+      <DependentUpon>201503181452090_addmodifitime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503181537121_mywrongtime.cs" />
+    <Compile Include="Migrations\201503181537121_mywrongtime.Designer.cs">
+      <DependentUpon>201503181537121_mywrongtime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BackgroundQuestion.cs" />
+    <Compile Include="Models\Dictionary.cs" />
+    <Compile Include="Models\ExamPaper.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Knowledge.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\QuestionGroup.cs" />
+    <Compile Include="Models\QuestionItem.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\ViewModel\ExamPaperViewModel.cs" />
+    <Compile Include="Models\ViewModel\KnowledgeViewModel.cs" />
+    <Compile Include="Models\ViewModel\PopModal.cs" />
+    <Compile Include="Models\ViewModel\QuestionViewModel.cs" />
+    <Compile Include="Models\ViewModel\ResourceDataViewModel.cs" />
+    <Compile Include="Models\ViewModel\UEditorViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UEditor\controller.ashx.cs">
+      <DependentUpon>controller.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\lib\jquery-validation\jquery.validate.js" />
+    <Content Include="Content\lib\jquery\js\jquery-1.11.1.min.js" />
+    <Content Include="Content\lib\jquery\js\jquery-1.3.2.min.js" />
+    <Content Include="Content\lib\jquery\js\jquery-1.4.4.min.js" />
+    <Content Include="Content\lib\jquery\js\jquery-1.5.2.min.js" />
+    <Content Include="Content\lib\jquery\js\jquery.js" />
+    <Content Include="Content\lib\jquery\js\jquery.min.js" />
+    <Content Include="Content\lib\ligerUI\js\core\base.js" />
+    <Content Include="Content\lib\ligerUI\js\core\inject.js" />
+    <Content Include="Content\lib\ligerUI\js\ligerui.all.js" />
+    <Content Include="Content\lib\ligerUI\js\ligerui.min.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerAccordion.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerButton.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerCheckBox.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerCheckBoxList.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerComboBox.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerDateEditor.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerDialog.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerDrag.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerEasyTab.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerFilter.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerForm.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerGrid.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerLayout.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerListBox.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerMenu.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerMenuBar.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerMessageBox.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerPanel.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerPopupEdit.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerPortal.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerRadio.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerRadioList.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerResizable.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerSpinner.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerTab.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerTextBox.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerTip.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerToolBar.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerTree.js" />
+    <Content Include="Content\lib\ligerUI\js\plugins\ligerWindow.js" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-all.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-common.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-dialog.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-form.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-grid.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-layout.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-menu.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-tab.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\css\ligerui-tree.css" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\bigloading.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\button-disabled.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\button-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\button.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\drop-icons.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\exclamation.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\invalid-line.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\loading.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\table.png" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\common\toggle.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-panel-title-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-panel-title-pressed.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-panel-title.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-tab-title-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-tab-title-pressed.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-tab-title.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-text.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-trigger-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-trigger-pressed.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\bg-trigger.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\btn-l.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\btn-r.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\button-bg-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\button-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\checkbox.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\dateeditor-bar-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\dateeditor-header-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\controls\radio.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\dateeditor\date.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\dateeditor\icon-first.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\dateeditor\icon-last.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\dateeditor\icon-next.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\dateeditor\icon-prev.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\form\verify-corner.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\grid-checkbox-checked.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\grid-checkbox.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\grid-detail-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\grid-detail-open.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\grid-tree-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\grid-tree-open.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\header-bg-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\header-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\header2-bg.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\popup-line.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\grid\popup-row-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\bar-button-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\checkbox-checked.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\checkbox.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\cross.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-close-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-down.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-drop.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-edited.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-first.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-last.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-line.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-load.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-next.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-prev.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-select.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-sort-asc.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-sort-desc.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-unselect.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\icon-up.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\icon\spr_icons.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\accordion-content.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\accordion-header-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\accordion-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\layout-header-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\layout-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\layout-sidebar-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\mini-bottom.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\mini-left.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\mini-right.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\mini-top.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\panel-content.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\panel-header-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\panel-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\panel-header2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\tabs-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\tabs-item-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\tabs-item-over-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\tabs-tools.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\layout\togglebar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\menu\menu-item-arrow.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\menu\menu-item-down.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\menu\menu-item-over-l.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\menu\menu-item-over-m.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\menu\menu-item-over-r.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\menu\menu-line-x.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\menu\menu-line-y.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\bar-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\header-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\header-bg.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\header2-bg.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\panel-btn-l.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\panel-btn-r.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\panel-btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\panel-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\panel-menu-item-down.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\panel-menu.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\panel-toolbar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\panel\panel-tools.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\folder-open.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\folder.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\loading.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\nodeloading.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\nodeloading2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\nodeloading3.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\nodeloading4.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\tree-leaf.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\tree-level.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\tree-noline.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\tree-status-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\tree-status-open.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\tree-status.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\tree\tree.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\ui\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\ui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\ui\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\ui\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\ui\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\ui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\box-icons.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\box.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\dialog-bc.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\dialog-icons.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\dialog-tc.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\dialog-winbtns.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\dialog.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\dialogbtn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\taskbar-task.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\taskbar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\taskbar.png" />
+    <Content Include="Content\lib\ligerUI\skins\Aqua\images\win\taskicon.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\css\all.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\css\common.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\css\dialog.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\css\form.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\css\grid.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\css\layout.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\css\tab.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\gridheader.png" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\accordion-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\icon-close-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\icon-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\layout-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\tabs-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-left-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-right-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\layout\togglebar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\tab_arrow_spr.png" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\tab_close.png" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\button-disabled.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\button-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\button.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\button1.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\button2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\date.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\dateeditor-bar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\dateeditor-btn-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\dateeditor-btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\dateeditor-thead.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\grid-detail-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\grid-detail-open.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\gridalt.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\gridbar.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\grideditor.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\icon-down.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\icon-select.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\icon-select2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\icon-unselect.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\icon-up.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\input.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\inputdisabled.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\loading.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\loading2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\loading3.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\loading4.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\loadingl.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\panel-btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\spr_icons.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\ui\trigger.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\win\dialog-winbtns.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\win\dialogbtn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray2014\images\win\dialogicon.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\css\all.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\css\common.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\css\dialog.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\css\form.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\css\grid.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\css\layout.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\css\tab.css" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\accordion-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\icon-close-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\icon-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\layout-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\tabs-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\tabs-item-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\tabs-item-left-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\tabs-item-right-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\tabs-item-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\layout\togglebar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\button-disabled.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\button-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\button.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\button1.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\button2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\dateeditor-bar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\dateeditor-btn-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\dateeditor-btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\dateeditor-thead.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\grid-detail-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\grid-detail-open.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\gridalt.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\gridbar.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\grideditor.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\icon-down.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\icon-select.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\icon-unselect.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\icon-up.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\input.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\inputdisabled.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\loading.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\loading2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\loading3.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\loading4.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\ui\trigger.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\win\dialog-winbtns.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\win\dialogbtn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Gray\images\win\dialogicon.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\add.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\archives.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\attibutes.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\back.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\bluebook.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\bookpen.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\busy.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\calendar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\candle.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\coffee.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\comment.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\communication.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\config.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\customers.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\cut.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\database.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\delete.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\discuss.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\down.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\edit.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\graywarn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\greenwarn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\help.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\home.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\lock.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\logout.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\mailbox.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\memeber.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\modify.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\msn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\myaccount.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\ok.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\outbox.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\pager.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\photograph.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\plus.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\prev.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\print.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\process.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\qq.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\refresh.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\right.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\role.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\save-disabled.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\save.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\search.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\search2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\settings.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\true.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\up.gif" />
+    <Content Include="Content\lib\ligerUI\skins\icons\view.gif" />
+    <Content Include="Content\lib\ligerUI\skins\ligerui-icons.css" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\css\form.css" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\css\grid.css" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\css\layout.css" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\css\style.css" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\checkboxradio.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\icon-down-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\icon-down.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\icon-up-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\icon-up.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\invalid_line.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-date-icon.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-down-icon.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-focus.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-l-focus.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-l-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-l.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-r-focus.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-r-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text-r.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\form\text.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\grid\gridheaderbg.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\accordion-header-over.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\accordion-header.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\layout-header-over.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\layout-header.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\tabs-bg.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\tabs-item-bg.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\tabs-item-over-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Silvery\images\layout\tabs-tools.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\css\all.css" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\css\dialog.css" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\css\form.css" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\css\grid.css" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\css\tab.css" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\gridheader.png" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\accordion-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\icon-close-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\icon-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\layout-header.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\tabs-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\tabs-item-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\tabs-item-left-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\tabs-item-right-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\tabs-item-selected.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\layout\togglebar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\tab_arrow_spr.png" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\tab_close.png" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\button-disabled.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\button-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\button.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\button1.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\button2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\date.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\dateeditor-bar.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\dateeditor-btn-over.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\dateeditor-btn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\dateeditor-thead.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\grid-detail-close.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\grid-detail-open.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\gridalt.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\gridbar.jpg" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\grideditor.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\icon-down.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\icon-select.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\icon-select2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\icon-unselect.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\icon-up.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\input.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\inputdisabled.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\loading.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\loading2.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\loading3.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\loading4.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\loadingl.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\spr_icons.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\ui\trigger.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\win\dialog-winbtns.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\win\dialogbtn.gif" />
+    <Content Include="Content\lib\ligerUI\skins\Tab\images\win\dialogicon.gif" />
+    <Content Include="Content\lib\ueditor\demo.html" />
+    <Content Include="Content\lib\ueditor\dialogs\anchor\anchor.html" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\attachment.css" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\attachment.html" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\attachment.js" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\alignicon.png" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\bg.png" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\file-icons.png" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\icons.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\icons.png" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\image.png" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\progress.png" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\success.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\attachment\images\success.png" />
+    <Content Include="Content\lib\ueditor\dialogs\background\background.css" />
+    <Content Include="Content\lib\ueditor\dialogs\background\background.html" />
+    <Content Include="Content\lib\ueditor\dialogs\background\background.js" />
+    <Content Include="Content\lib\ueditor\dialogs\background\images\bg.png" />
+    <Content Include="Content\lib\ueditor\dialogs\background\images\success.png" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\chart.config.js" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\charts.css" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\charts.html" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\charts.js" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\images\charts0.png" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\images\charts1.png" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\images\charts2.png" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\images\charts3.png" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\images\charts4.png" />
+    <Content Include="Content\lib\ueditor\dialogs\charts\images\charts5.png" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\emotion.html" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\gmap\gmap.html" />
+    <Content Include="Content\lib\ueditor\dialogs\help\help.css" />
+    <Content Include="Content\lib\ueditor\dialogs\help\help.html" />
+    <Content Include="Content\lib\ueditor\dialogs\help\help.js" />
+    <Content Include="Content\lib\ueditor\dialogs\image\image.css" />
+    <Content Include="Content\lib\ueditor\dialogs\image\image.html" />
+    <Content Include="Content\lib\ueditor\dialogs\image\image.js" />
+    <Content Include="Content\lib\ueditor\dialogs\image\images\alignicon.jpg" />
+    <Content Include="Content\lib\ueditor\dialogs\image\images\bg.png" />
+    <Content Include="Content\lib\ueditor\dialogs\image\images\icons.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\image\images\icons.png" />
+    <Content Include="Content\lib\ueditor\dialogs\image\images\image.png" />
+    <Content Include="Content\lib\ueditor\dialogs\image\images\progress.png" />
+    <Content Include="Content\lib\ueditor\dialogs\image\images\success.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\image\images\success.png" />
+    <Content Include="Content\lib\ueditor\dialogs\insertframe\insertframe.html" />
+    <Content Include="Content\lib\ueditor\dialogs\internal.js" />
+    <Content Include="Content\lib\ueditor\dialogs\link\link.html" />
+    <Content Include="Content\lib\ueditor\dialogs\map\map.html" />
+    <Content Include="Content\lib\ueditor\dialogs\map\show.html" />
+    <Content Include="Content\lib\ueditor\dialogs\music\music.css" />
+    <Content Include="Content\lib\ueditor\dialogs\music\music.html" />
+    <Content Include="Content\lib\ueditor\dialogs\music\music.js" />
+    <Content Include="Content\lib\ueditor\dialogs\preview\preview.html" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\addimg.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\brush.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\delimg.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\empty.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\eraser.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\redo.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\redoH.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\scale.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\size.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\undo.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\images\undoH.png" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\scrawl.css" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\scrawl.html" />
+    <Content Include="Content\lib\ueditor\dialogs\scrawl\scrawl.js" />
+    <Content Include="Content\lib\ueditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="Content\lib\ueditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="Content\lib\ueditor\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="Content\lib\ueditor\dialogs\spechars\spechars.html" />
+    <Content Include="Content\lib\ueditor\dialogs\spechars\spechars.js" />
+    <Content Include="Content\lib\ueditor\dialogs\table\dragicon.png" />
+    <Content Include="Content\lib\ueditor\dialogs\table\edittable.css" />
+    <Content Include="Content\lib\ueditor\dialogs\table\edittable.html" />
+    <Content Include="Content\lib\ueditor\dialogs\table\edittable.js" />
+    <Content Include="Content\lib\ueditor\dialogs\table\edittd.html" />
+    <Content Include="Content\lib\ueditor\dialogs\table\edittip.html" />
+    <Content Include="Content\lib\ueditor\dialogs\template\config.js" />
+    <Content Include="Content\lib\ueditor\dialogs\template\images\bg.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\template\images\pre0.png" />
+    <Content Include="Content\lib\ueditor\dialogs\template\images\pre1.png" />
+    <Content Include="Content\lib\ueditor\dialogs\template\images\pre2.png" />
+    <Content Include="Content\lib\ueditor\dialogs\template\images\pre3.png" />
+    <Content Include="Content\lib\ueditor\dialogs\template\images\pre4.png" />
+    <Content Include="Content\lib\ueditor\dialogs\template\template.css" />
+    <Content Include="Content\lib\ueditor\dialogs\template\template.html" />
+    <Content Include="Content\lib\ueditor\dialogs\template\template.js" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\bg.png" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\file-icons.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\file-icons.png" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\icons.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\icons.png" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\image.png" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\progress.png" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\success.gif" />
+    <Content Include="Content\lib\ueditor\dialogs\video\images\success.png" />
+    <Content Include="Content\lib\ueditor\dialogs\video\video.css" />
+    <Content Include="Content\lib\ueditor\dialogs\video\video.html" />
+    <Content Include="Content\lib\ueditor\dialogs\video\video.js" />
+    <Content Include="Content\lib\ueditor\dialogs\webapp\webapp.html" />
+    <Content Include="Content\lib\ueditor\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="Content\lib\ueditor\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="Content\lib\ueditor\dialogs\wordimage\tangram.js" />
+    <Content Include="Content\lib\ueditor\dialogs\wordimage\wordimage.html" />
+    <Content Include="Content\lib\ueditor\dialogs\wordimage\wordimage.js" />
+    <Content Include="Content\lib\ueditor\index.html" />
+    <Content Include="Content\lib\ueditor\lang\en\en.js" />
+    <Content Include="Content\lib\ueditor\lang\en\images\addimage.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\background.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\button.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\copy.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\listbackground.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\localimage.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\music.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="Content\lib\ueditor\lang\en\images\upload.png" />
+    <Content Include="Content\lib\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="Content\lib\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="Content\lib\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="Content\lib\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="Content\lib\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="Content\lib\ueditor\themes\default\css\ueditor.css" />
+    <Content Include="Content\lib\ueditor\themes\default\css\ueditor.min.css" />
+    <Content Include="Content\lib\ueditor\themes\default\dialogbase.css" />
+    <Content Include="Content\lib\ueditor\themes\default\images\anchor.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\arrow.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\arrow_down.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\arrow_up.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\button-bg.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\charts.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\cursor_h.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\cursor_h.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\cursor_v.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\cursor_v.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\filescan.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\highlighted.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\icons-all.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\icons.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\icons.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\loaderror.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\loading.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\lock.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\pagebreak.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\scale.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\sortable.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\sparator_v.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\table-cell-align.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\upload.png" />
+    <Content Include="Content\lib\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\word.gif" />
+    <Content Include="Content\lib\ueditor\themes\default\images\wordpaste.png" />
+    <Content Include="Content\lib\ueditor\themes\iframe.css" />
+    <Content Include="Content\lib\ueditor\third-party\codemirror\codemirror.css" />
+    <Content Include="Content\lib\ueditor\third-party\codemirror\codemirror.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\highcharts-more.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\highcharts.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\highcharts.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\annotations.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\data.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\data.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\exporting.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\funnel.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\map.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\map.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\themes\gray.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\themes\grid.js" />
+    <Content Include="Content\lib\ueditor\third-party\highcharts\themes\skies.js" />
+    <Content Include="Content\lib\ueditor\third-party\jquery-1.10.2.js" />
+    <Content Include="Content\lib\ueditor\third-party\jquery-1.10.2.min.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\addKityFormulaDialog.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\defaultFilterFix.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\getKfContent.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kf-icon.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityFormulaDialog.html" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\custom\bar-bg.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\custom\bar.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\custom\bg.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\custom\bottom.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\custom\btn.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\custom\down.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\custom\top.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\custom\up.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\edit\bar-bg.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\edit\bar-left.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\edit\bar-right.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\edit\thumb-bg.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\edit\thumb-left.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\scrollbar\edit\thumb-right.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\aleph.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\bbbk.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\beth.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\circleds.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\complement.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\daleth.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\ell.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\eth.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\finv.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\game.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\gimel.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\hbar.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\hslash.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\im.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\mho.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\partial.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\re.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\alphabetic\wp.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\circlearrowleft.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\circlearrowright.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\curvearrowleft.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\curvearrowright.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\downarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\downdownarrows.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\downharpoonleft.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\downharpoonright.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\gets.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\leftarrowtail.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\leftharpoondown.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\leftharpoonup.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\leftleftarrows.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\leftrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\leftrightarrows.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\leftrightharpoons.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\leftrightsquigarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\longleftarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\longleftrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\longrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\looparrowleft.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\looparrowright.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\multimap.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\nearrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\nleftarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\nrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\nwarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\rightarrowtail.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\rightharpoondown.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\rightharpoonup.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\rightleftarrows.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\rightleftharpoons.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\rightrightarrows.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\rightsquigarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\searrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\swarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\to.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\twoheadleftarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\twoheadrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-downarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-leftarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-leftrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-lftarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-lleftarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-longleftarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-longleftrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-longrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-lsh.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-nleftarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-nleftrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-nrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-rightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-rrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-rsh.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-uparrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\u-updownarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\uparrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\updownarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\upharpoonleft.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\upharpoonright.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\arrow\upuparrows.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\brackets\1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\brackets\2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\brackets\3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\brackets\4.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\btn.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\brackets.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\down.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\frac.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\fx.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\int.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\lim.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\open.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\script.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\sin.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\sqrt.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\sum.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\tick.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\button\up.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\a.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\b.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\c.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\d.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\e.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\f.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\g.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\h.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\i.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\j.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\k.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\l.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\m.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\n.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\o.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\p.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\q.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\r.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\s.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\t.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\u.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\v.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\w.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\x.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\y.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\bb\z.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\a.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\b.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\c.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\d.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\e.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\f.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\g.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\h.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\i.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\j.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\k.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\l.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\m.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\n.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\o.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\p.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\q.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\r.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\s.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\t.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\u.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\v.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\w.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\x.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\y.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\cal\z.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\a.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\b.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\c.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\d.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\e.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\f.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\g.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\h.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\i.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\j.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\k.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\l.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\m.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\n.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\o.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\p.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\q.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\r.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\s.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\t.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\u.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ua.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ub.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uc.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ud.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ue.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uf.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ug.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uh.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ui.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uj.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uk.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ul.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\um.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\un.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uo.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\up.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ur.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\us.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ut.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uu.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uv.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uw.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\ux.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uy.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\uz.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\v.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\w.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\x.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\y.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\frak\z.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\alpha.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\beta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\chi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\delta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\epsilon.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\eta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\gamma.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\iota.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\kappa.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\lambda.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\mu.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\nu.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\omega.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\omicron.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\phi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\pi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\psi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\rho.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\sigma.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\tau.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\theta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\upsilon.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\xi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\lower\zeta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\misc\digamma.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\misc\varepsilon.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\misc\varkappa.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\misc\varphi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\misc\varpi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\misc\varrho.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\misc\varsigma.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\misc\vartheta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\alpha.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\beta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\chi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\delta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\epsilon.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\eta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\gamma.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\iota.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\kappa.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\lambda.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\mu.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\nu.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\omega.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\omicron.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\phi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\pi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\psi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\rho.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\sigma.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\tau.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\theta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\upsilon.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\xi.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\greek\upper\zeta.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\aleph.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\approx.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\ast.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\baifenhao.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\because.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\beth.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\blacksquare.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\cap.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\cdot.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\circ.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\cong.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\cup.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\ddots.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\div.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\downarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\eq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\equiv.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\exists.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\forall.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\geq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\gets.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\gg.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\gt.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\in.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\infty.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\leftrightarrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\leq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\ll.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\lt.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\minus.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\mp.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\neg.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\nexists.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\ni.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\partial.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\plus.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\pm.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\propto.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\sim.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\simeq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\surd.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\tanhao.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\therefore.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\times.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\to.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\uparrow.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\varnothing.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\math\vdots.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\gneqq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\gnsim.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\lneqq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\lnsim.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nbdash-1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\ncong.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\neq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nequiv.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nexists.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\ngeq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\ngtr.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nleq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nless.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nmid.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\notin.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nparallel.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nprec.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nsim.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nsubseteq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nsucc.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nsupseteq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\ntriangleleft.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\ntrianglelefteq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\ntriangleright.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\ntrianglerighteq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nvdash-1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nvdash-2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nvdash-3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\nvdash.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\precnsim.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\subsetneq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\succnsim.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\not\supsetneq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\a.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\b.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\c.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\d.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\e.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\f.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\g.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\h.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\i.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\j.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\k.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\l.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\m.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\n.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\o.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\p.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\q.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\r.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\s.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\t.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\u.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ua.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ub.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uc.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ud.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ue.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uf.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ug.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uh.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ui.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uj.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uk.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ul.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\um.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\un.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uo.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\up.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uq.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ur.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\us.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ut.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uu.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uv.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uw.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\ux.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uy.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\uz.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\v.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\w.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\x.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\y.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\char\rm\z.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\frac\1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\frac\2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\frac\3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\frac\c1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\frac\c2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\frac\c4.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\frac\c5.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\4.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\5.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\6.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\c1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\c2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\func\c3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\int\1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\int\2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\int\3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\int\4.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\int\5.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\int\6.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\large\1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\large\2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\large\3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\other.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\script\1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\script\2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\script\3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\script\4.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\script\c1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\script\c2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\script\c3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\sqrt\1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\sqrt\2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\sqrt\3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\sqrt\4.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\sqrt\c1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\sqrt\c2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\ys\1.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\ys\2.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\images\toolbar\ys\3.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\styles\base.css" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\styles\page.css" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\styles\scrollbar.css" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\styles\ui.css" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\theme\default\fui.css" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\theme\default\fui.min.css" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\theme\default\images\close.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\theme\default\images\down.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\theme\default\images\open.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\assets\theme\default\images\up.png" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\js\jquery-1.11.0.min.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\js\kity-formula-parser.all.min.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\js\kity-formula-render.all.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\js\kityformula-editor.all.min.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\js\kitygraph.all.js" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\loading.gif" />
+    <Content Include="Content\lib\ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="Content\lib\ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="Content\lib\ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\font\vjs.svg" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\video-js.css" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\video-js.min.css" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\video-js.swf" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\video.dev.js" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\video.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\Uploader.swf" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.css" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.min.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="Content\lib\ueditor\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="Content\lib\ueditor\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="Content\lib\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="Content\lib\ueditor\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="Content\lib\ueditor\ueditor.all.js" />
+    <Content Include="Content\lib\ueditor\ueditor.all.min.js" />
+    <Content Include="Content\lib\ueditor\ueditor.config.js" />
+    <Content Include="Content\lib\ueditor\ueditor.parse.js" />
+    <Content Include="Content\lib\ueditor\ueditor.parse.min.js" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\lib\jquery\js\jquery.min.map" />
+    <Content Include="Content\lib\ueditor\third-party\jquery-1.10.2.min.map" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\font\vjs.eot" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\font\vjs.ttf" />
+    <Content Include="Content\lib\ueditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\resource\KF_AMS_BB.woff" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\resource\KF_AMS_CAL.woff" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\resource\KF_AMS_FRAK.woff" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\resource\KF_AMS_MAIN.woff" />
+    <Content Include="Content\lib\ueditor\kityformula-plugin\kityformula\resource\KF_AMS_ROMAN.woff" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\BackgroundQuestion\Create.cshtml" />
+    <Content Include="Views\BackgroundQuestion\Delete.cshtml" />
+    <Content Include="Views\BackgroundQuestion\Details.cshtml" />
+    <Content Include="Views\BackgroundQuestion\Edit.cshtml" />
+    <Content Include="Views\BackgroundQuestion\Index.cshtml" />
+    <Content Include="Views\ExamPaper\Create.cshtml" />
+    <Content Include="Views\ExamPaper\Delete.cshtml" />
+    <Content Include="Views\ExamPaper\Details.cshtml" />
+    <Content Include="Views\ExamPaper\Edit.cshtml" />
+    <Content Include="Views\ExamPaper\Index.cshtml" />
+    <Content Include="Views\QuestionGroup\Create.cshtml" />
+    <Content Include="Views\QuestionGroup\Delete.cshtml" />
+    <Content Include="Views\QuestionGroup\Details.cshtml" />
+    <Content Include="Views\QuestionGroup\Edit.cshtml" />
+    <Content Include="Views\QuestionGroup\Index.cshtml" />
+    <Content Include="UEditor\controller.ashx" />
+    <Content Include="UEditor\config.json" />
+    <Content Include="Views\Shared\DisplayTemplates\NullString.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\UnixToDateTime.cshtml" />
+    <Content Include="Views\Knowledge\Index.cshtml" />
+    <Content Include="Views\Knowledge\Details.cshtml" />
+    <Content Include="Views\Knowledge\Create.cshtml" />
+    <Content Include="Views\Knowledge\Edit.cshtml" />
+    <Content Include="Views\Knowledge\Delete.cshtml" />
+    <Content Include="Views\Shared\ModalView.cshtml" />
+    <Content Include="Views\Question\Create.cshtml" />
+    <Content Include="Views\Question\Delete.cshtml" />
+    <Content Include="Views\Question\Details.cshtml" />
+    <Content Include="Views\Question\Edit.cshtml" />
+    <Content Include="Views\Question\Index.cshtml" />
+    <Content Include="Views\Shared\UEditor.cshtml" />
+    <Content Include="Views\Shared\PublicPartial\UIEditorJS.cshtml" />
+    <Content Include="Views\Knowledge\List.cshtml" />
+    <Content Include="Views\Shared\PublicPartial\QuestionItem.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ToHtml.cshtml" />
+    <Content Include="Views\Question\CssAndJs.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UEditor\UEditor.csproj">
+      <Project>{bfe3d44d-900d-4345-b141-7ba932e0f097}</Project>
+      <Name>UEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201503061450399_addquestionitem.resx">
+      <DependentUpon>201503061450399_addquestionitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503070553458_addquestion.resx">
+      <DependentUpon>201503070553458_addquestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503101518254_addvalidate.resx">
+      <DependentUpon>201503101518254_addvalidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503141419385_addbackgroundnull.resx">
+      <DependentUpon>201503141419385_addbackgroundnull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503161415321_editquesitonid.resx">
+      <DependentUpon>201503161415321_editquesitonid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503161427133_addquestionitem1.resx">
+      <DependentUpon>201503161427133_addquestionitem1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503171516512_dictionarytime.resx">
+      <DependentUpon>201503171516512_dictionarytime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503171521055_adddictionarytimes.resx">
+      <DependentUpon>201503171521055_adddictionarytimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503171528455_addmydictionarygrouptimesss.resx">
+      <DependentUpon>201503171528455_addmydictionarygrouptimesss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503171531359_addtestwhatwrong.resx">
+      <DependentUpon>201503171531359_addtestwhatwrong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503171534206_addmydictionitem.resx">
+      <DependentUpon>201503171534206_addmydictionitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503171535553_addtestcreatetimes.resx">
+      <DependentUpon>201503171535553_addtestcreatetimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503181452090_addmodifitime.resx">
+      <DependentUpon>201503181452090_addmodifitime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503181537121_mywrongtime.resx">
+      <DependentUpon>201503181537121_mywrongtime.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7210/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。启用“NuGet 程序包还原”可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

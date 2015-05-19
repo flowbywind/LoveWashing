@@ -1,0 +1,21 @@
+﻿@model List<GaoKao.WebUI.Models.QuestionItem>
+@using GaoKao.WebUI.Models;
+@using GaoKao.WebUI.Models.ViewModel;
+@{
+    ViewBag.Title = "试题选项";
+    Layout = null;
+}
+
+<div class="row" id="QuestionItem">
+    @foreach (QuestionItem item in Model)
+    {
+        <div class="col-md-1">
+            <input type="checkbox"  id='QuestionKey_@item.Key' name="QuestionKey_@item.Key"/>
+            <label for="questionkey">@item.Key</label>
+        </div>
+        <div class="col-md-11">
+            @Html.Partial("UEditor", new UEditorViewModel() { ID = "QuestionItem" + item.Key, Name =  "QuestionItem" + item.Key,Content=item.Content })
+        </div>
+    }
+</div>
+

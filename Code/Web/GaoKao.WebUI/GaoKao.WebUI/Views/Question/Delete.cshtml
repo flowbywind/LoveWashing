@@ -1,0 +1,92 @@
+﻿@model GaoKao.WebUI.Models.Question
+
+<h3>你确定要删除这条记录吗?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title, "ToHtml")
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Analysis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Analysis, "ToHtml")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedPerson)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedPerson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Difficulty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Difficulty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KnowledgeID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KnowledgeID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MissScore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MissScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Num)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaperID)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedPerson)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedPerson)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedTime, "UnixToDateTime")
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="删除" class="btn btn-default" />
+            |
+            @Html.ActionLink("返回列表", "Index")
+        </div>
+    }
+</div>
+

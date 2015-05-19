@@ -1,0 +1,79 @@
+﻿@model PagedList.IPagedList<GaoKao.WebUI.Models.ViewModel.QuestionViewModel>
+@using GaoKao.WebUI;
+@using PagedList.Mvc;
+
+<table class="table">
+    <tr>
+         <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model=>model.PaperName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model=>model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Difficulty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.ModifiedPerson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedTime)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title,"ToHtml")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.PaperName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Difficulty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedPerson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedTime,"UnixToDateTime")
+            </td>
+            <td>
+                @Html.ActionLink("编辑", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("删除", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+</table>
+@Html.PagedListPager(Model, pageNumber => Url.Action("index", new { pageNumber }));
+

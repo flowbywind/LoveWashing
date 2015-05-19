@@ -1,0 +1,91 @@
+﻿<script>
+    var question = {
+        initform: function () {
+            //禁用试卷
+            $("#ExamPaper_Title").attr("disabled", "disabled");
+            //禁用考点
+            $("#KnowledgeName").attr("disabled", "disabled");
+        },
+        initdata: function () {
+            //标题
+            UE.getEditor('titleContainer').ready(function () {
+                this.setContent('@Html.Raw(Model.Title)')
+            });
+            //解析
+            UE.getEditor('analysisContainer').ready(function () {
+                this.setContent('@Html.Raw(Model.Analysis)');
+            })
+            //答案
+            var answer = '@Model.Answer';
+            if (answer) {
+                var answerary = answer.split(',');
+                if (answerary && answerary.length > 0) {
+                    answerary.forEach(function (index) {
+                        $("input[type=checkbox][id='QuestionKey_" + index + "']").prop("checked", "checked");
+                    });
+                }
+            }
+        },
+          submitdata: function () {
+              //验证数据
+              $("span.field-validation-error.text-danger").text(""); //清空错误提示
+              var isValidate = true;
+
+              //考点不得为空
+              if ($("#KnowledgeName").val() == "") {
+                  $("#span_background").text("考点不得为空");
+                  isValidate = false;
+              }
+              //题干不得为空
+              if (UE && UE.getEditor && UE.getEditor('titleContainer') && UE.getEditor('titleContainer').getContent() == "") {
+                  $("#span_title").text("题干不得为空");
+                  isValidate = false;
+              }
+
+              //答案不得为空
+              var checkcount = 0;
+              $("input[type=checkbox][id^='QuestionKey_']").each(function () {
+                  if ($(this).prop("checked")) {
+                      checkcount += 1;
+                  }
+              });
+              if (checkcount == 0) {
+                  $("#span_answerItem").text("ABCD必须勾选一项作为答案");
+                  isValidate = false;
+              }
+              var questiontype = $("#QuestionType").find("option:selected").text();
+              if (questiontype == "单项选择题" && checkcount > 1) {
+                  $("#span_answerItem").text("单项选择题只能勾选一项作为答案");
+                  isValidate = false;
+              }
+              if (questiontype == "多项选择题" && checkcount < 2) {
+                  $("#span_answerItem").text("多项选择题必须勾选多项作为答案");
+                  isValidate = false;
+              }
+
+              //选项不得为空
+              var ary = new Array("A", "B", "C", "D");
+              var isempty = false;
+              var errmsg = "";
+              ary.forEach(function (e) {
+                  var a = e;
+                  if (UE && UE.getEditor && UE.getEditor("QuestionItem" + a) && UE.getEditor("QuestionItem" + a).getContent() == "") {
+                      errmsg += " " + a;
+                      isempty = true;
+                  }
+              });
+              if (isempty) {
+                  $("#span_questionItem").text("题目选项" + errmsg + "不得为空");
+                  isValidate = false;
+              }
+              if (!isValidate) { return false; }
+              $("input[type=submit]").click();
+          }
+      };
+    function showModal() {
+        $(".modal-body").load('@Url.Action("List", "Knowledge")');
+        $("#myModal").modal({
+        });
+    }
+    
+</script>

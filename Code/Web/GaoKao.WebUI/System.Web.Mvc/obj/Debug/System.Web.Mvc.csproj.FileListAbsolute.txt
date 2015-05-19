@@ -1,0 +1,8 @@
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.Mvc.xml
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.Mvc.dll
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.Mvc.pdb
+D:\Git\Web\aspnetweb\src\System.Web.Mvc\obj\Debug\System.Web.Mvc.csprojResolveAssemblyReference.cache
+D:\Git\Web\aspnetweb\src\System.Web.Mvc\obj\Debug\System.Web.Mvc.Properties.MvcResources.resources
+D:\Git\Web\aspnetweb\src\System.Web.Mvc\obj\Debug\System.Web.Mvc.csproj.GenerateResource.Cache
+D:\Git\Web\aspnetweb\src\System.Web.Mvc\obj\Debug\System.Web.Mvc.dll
+D:\Git\Web\aspnetweb\src\System.Web.Mvc\obj\Debug\System.Web.Mvc.pdb

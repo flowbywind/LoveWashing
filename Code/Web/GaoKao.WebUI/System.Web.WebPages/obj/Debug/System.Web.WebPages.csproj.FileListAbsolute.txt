@@ -1,0 +1,9 @@
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.WebPages.xml
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.WebPages.dll
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.WebPages.pdb
+D:\Git\Web\aspnetweb\src\System.Web.WebPages\obj\Debug\System.Web.WebPages.csprojResolveAssemblyReference.cache
+D:\Git\Web\aspnetweb\src\System.Web.WebPages\obj\Debug\System.Web.WebPages.Common.CommonResources.resources
+D:\Git\Web\aspnetweb\src\System.Web.WebPages\obj\Debug\System.Web.WebPages.Resources.WebPageResources.resources
+D:\Git\Web\aspnetweb\src\System.Web.WebPages\obj\Debug\System.Web.WebPages.csproj.GenerateResource.Cache
+D:\Git\Web\aspnetweb\src\System.Web.WebPages\obj\Debug\System.Web.WebPages.dll
+D:\Git\Web\aspnetweb\src\System.Web.WebPages\obj\Debug\System.Web.WebPages.pdb

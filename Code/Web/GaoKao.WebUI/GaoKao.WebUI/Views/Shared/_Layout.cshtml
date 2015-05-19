@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 高考题库管理系统</title>
+    <link rel="stylesheet" href="~/Content/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/css/site.css" />
+    <script src="~/Content/lib/jquery/js/jquery.js"></script> 
+    <script src="~/Content/lib/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                     @Html.ActionLink("高考题库管理系统", "Index", "ExamPaper", new { area = "" }, new { @class = "navbar-brand" })              
+            </div>
+            <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("试卷管理", "Index", "ExamPaper")</li>
+                        <li>@Html.ActionLink("考点管理", "Index", "Knowledge")</li>
+                        <li>@Html.ActionLink("题目管理", "Index", "Question")</li>
+                    </ul>
+                     @Html.Partial("_LoginPartial")
+                </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderSection("featured", required: false)
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+      @*<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

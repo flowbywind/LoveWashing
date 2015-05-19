@@ -1,0 +1,9 @@
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Git\Web\aspnetweb\bin\Debug\System.Web.WebPages.Razor.pdb
+D:\Git\Web\aspnetweb\src\System.Web.WebPages.Razor\obj\Debug\System.Web.WebPages.Razor.csprojResolveAssemblyReference.cache
+D:\Git\Web\aspnetweb\src\System.Web.WebPages.Razor\obj\Debug\System.Web.WebPages.Razor.Common.CommonResources.resources
+D:\Git\Web\aspnetweb\src\System.Web.WebPages.Razor\obj\Debug\System.Web.WebPages.Razor.Resources.RazorWebResources.resources
+D:\Git\Web\aspnetweb\src\System.Web.WebPages.Razor\obj\Debug\System.Web.WebPages.Razor.csproj.GenerateResource.Cache
+D:\Git\Web\aspnetweb\src\System.Web.WebPages.Razor\obj\Debug\System.Web.WebPages.Razor.dll
+D:\Git\Web\aspnetweb\src\System.Web.WebPages.Razor\obj\Debug\System.Web.WebPages.Razor.pdb

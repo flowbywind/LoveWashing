@@ -1,0 +1,134 @@
+﻿@model GaoKao.WebUI.Models.Question
+@using GaoKao.WebUI.Models;
+@using GaoKao.WebUI.Models.ViewModel;
+
+@Html.Partial("PublicPartial/UIEditorJS")
+@using (Html.BeginForm())
+{   
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>编辑</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.CreatedTime)
+        @Html.HiddenFor(model => model.CreatedPerson)
+        <div class="form-group">
+            @Html.LabelFor(model => model.PaperID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ExamPaper.Title, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.HiddenFor(model => model.PaperID)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.QuestionType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.QuestionType, CommonData.GetQuestionEnum(GaoKao.WebUI.EnumDictionaryGroup.QuestionType), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.QuestionType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.QuestionGroupID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.QuestionGroupID, CommonData.GetQuestionGroup(Model.PaperID), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.QuestionGroupID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.BackgroundID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.BackgroundID, CommonData.GetQuestionBackground(Model.PaperID), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.QuestionGroupID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.KnowledgeID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 ">
+                <div class="input-group" style="width: 362px;">
+                    <input type="text" class="form-control" id="KnowledgeName" style="width: 285px;"  value="@ViewBag.KnowledgeName"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-primary" onclick="showModal()">选择考点</button>
+                    </span>
+                </div>
+                <span class="field-validation-error text-danger" data-valmsg-for="KnowledgeName" data-valmsg-replace="true" id="span_background"></span>
+                @Html.HiddenFor(model => model.KnowledgeID)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Num, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Num, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Num, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Score, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Score, CommonData.GetQuestionEnum(GaoKao.WebUI.EnumDictionaryGroup.QuestionScore), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Score, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.MissScore, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.MissScore, CommonData.GetQuestionEnum(GaoKao.WebUI.EnumDictionaryGroup.QuestionMissScore), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MissScore, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Difficulty, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Difficulty, CommonData.GetQuestionEnum(GaoKao.WebUI.EnumDictionaryGroup.QuestionDifficulty), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Difficulty, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Partial("UEditor", new UEditorViewModel() { ID = "titleContainer", Name = "Title" })
+                <span class="field-validation-error text-danger" data-valmsg-for="container" data-valmsg-replace="true" id="span_title"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Analysis, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Partial("UEditor", new UEditorViewModel() { ID = "analysisContainer", Name = "Analysis" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.State, CommonData.PaperState, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">试题选项</label>
+            <div class="col-md-10">
+                @Html.Partial("PublicPartial/QuestionItem", Model.QuestionItems)
+                <span class="field-validation-error text-danger" data-valmsg-for="questionItem" data-valmsg-replace="true" id="span_answerItem"></span><br />
+                <span class="field-validation-error text-danger" data-valmsg-for="questionItem" data-valmsg-replace="true" id="span_questionItem"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="保存" class="btn btn-default" style="display: none" />
+                <input type="button" value="保存" class="btn btn-default" onclick="return question.submitdata()" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("返回列表", "Index")
+</div>
+@{
+    PopModal pop = new PopModal() { Title = "选择考点" };
+}
+@Html.Partial("ModalView", pop)
+@Html.Partial("CssAndJs")
+<script type="text/javascript">
+    $(function () {
+        question.initdata();
+        question.initform();
+    });
+</script>
