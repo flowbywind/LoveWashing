@@ -10,9 +10,8 @@ using System.Data;
 namespace Love.Washing.WebUI.Controllers
 {
     [Authorize]
-    public class ExamPaperController : Controller
+    public class ExamPaperController : BaseController
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: ExamPaper
         public ActionResult Index(int? pageNumber,int? pageSize)

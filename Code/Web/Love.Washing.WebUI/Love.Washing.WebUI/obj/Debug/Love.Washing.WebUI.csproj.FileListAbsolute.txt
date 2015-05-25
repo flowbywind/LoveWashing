@@ -57,3 +57,5 @@ D:\Git\Project\LoveWashing\Code\Web\Love.Washing.WebUI\Love.Washing.WebUI\bin\zh
 D:\Git\Project\LoveWashing\Code\Web\Love.Washing.WebUI\Love.Washing.WebUI\obj\Debug\Love.Washing.WebUI.dll
 D:\Git\Project\LoveWashing\Code\Web\Love.Washing.WebUI\Love.Washing.WebUI\obj\Debug\Love.Washing.WebUI.pdb
 D:\Git\Project\LoveWashing\Code\Web\Love.Washing.WebUI\Love.Washing.WebUI\obj\Debug\Love.Washing.WebUI.csprojResolveAssemblyReference.cache
+D:\Git\Project\LoveWashing\Code\Web\Love.Washing.WebUI\Love.Washing.WebUI\obj\Debug\Love.Washing.WebUI.Migrations.AddBlogUrl.resources
+D:\Git\Project\LoveWashing\Code\Web\Love.Washing.WebUI\Love.Washing.WebUI\obj\Debug\Love.Washing.WebUI.csproj.GenerateResource.Cache
