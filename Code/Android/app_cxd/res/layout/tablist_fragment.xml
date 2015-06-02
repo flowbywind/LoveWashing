@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/tab_list_pull_down"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/pulldownviewtemplate" />
+    <!--
+         <com.easylife.app_wash.widget.RefreshableView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refresh_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+     <ListView
+        android:id="@+id/mylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/line_light"
+        android:dividerHeight="1dp" />
+    -->
+    <!-- </com.easylife.app_wash.widget.RefreshableView> -->
+
+</LinearLayout>

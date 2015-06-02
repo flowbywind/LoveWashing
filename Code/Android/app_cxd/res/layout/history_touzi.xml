@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_header" >
+    </include>
+
+    <include
+        android:id="@+id/select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_title"
+        layout="@layout/histoty_touzi_title_include" />
+
+    <include
+        android:id="@+id/tab_list_pull_down"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/select_layout"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin"
+        layout="@layout/pulldownviewtemplate" />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/height_small" >
+
+        <include
+            android:id="@+id/include_title"
+            layout="@layout/common_header" />
+
+        <com.easylife.app_wash.widget.ListViewForScrollView
+            android:id="@+id/myList1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/include_title"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/line_light"
+            android:dividerHeight="1dp"
+            android:footerDividersEnabled="false"
+            android:scrollbars="none" >
+        </com.easylife.app_wash.widget.ListViewForScrollView>
+    </RelativeLayout>
+
+</ScrollView>

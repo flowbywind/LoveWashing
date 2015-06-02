@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_white" >
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:text="被推荐人：张宏"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_middle" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/type"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:text="2015-05-05 23:42"
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_small" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/type"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:paddingBottom="@dimen/layout_margin"
+        android:text="投资金额：5000元"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_middle" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_margin"
+        android:layout_below="@+id/money"
+        android:background="@color/line_light" />
+
+</RelativeLayout>

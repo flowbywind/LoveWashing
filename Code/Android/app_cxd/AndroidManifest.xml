@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.easylife.app_wash"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.easylife.app_wash.view.SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.easylife.app_wash.view.FindPsdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.HistoryJiaoyiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.AuthActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name="com.easylife.app_wash.view.ChongzhiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.HistoryTouziActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.MessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.TuijianActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.TixianActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.FriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.RepaymentPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.BankAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.SuggestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.CommonWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.RegistActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.SetPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.IdentificationActivity"
+            android:hardwareAccelerated="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.SetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.ToubiaoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.MyBankCardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.FeedBackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.MyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.MyDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.AccountMoneyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.DetailHomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.AboutusActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.HelpCenterActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easylife.app_wash.view.NetsetDialogActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog" />
+        <activity
+            android:name="com.easylife.app_wash.view.ExitDialogActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog" />
+        <activity
+            android:name="com.easylife.app_wash.view.DownloadDialog"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog" />
+
+        <!-- 分享内容编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- 腾讯SSO授权的Activity注册 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1103432464" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信回调activity -->
+        <!-- 银联插件begin -->
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 银联插件end -->
+
+        <activity
+            android:name="com.easylife.app_wash.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 友盟注册 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="544dd88cfd98c5a67e00db73" >
+        </meta-data>
+    </application>
+
+</manifest>

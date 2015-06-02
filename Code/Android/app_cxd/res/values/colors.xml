@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 字体颜色 -->
+    <color name="fontcolor_dark">#343434</color>
+     <color name="fontcolor_lighter">#c3c3c3</color>
+    <color name="fontcolor_light">#868686</color>
+    <color name="fontcolor_yellow">#ff8f00</color>
+    <color name="fontcolor_blue">#30b4fa</color>
+    <color name="fontcolor_red">#ff4301</color>
+    <color name="fontcolor_white">#f9f9f9</color>
+    <color name="fontcolor_skyblue">#00ccff</color>
+
+    <!-- line颜色 -->
+    <color name="line_light">#eeeeee</color>
+    <color name="line_light2">#f1f1f1</color>
+    <color name="line_middle">#d1d1d1</color>
+    <color name="line_dark">#c3c3c3</color>
+
+    <!-- 背景颜色 -->
+    <color name="tab_background">#f0f0f0</color>
+    <color name="background_blue">#30b4fa</color>
+    <color name="background_blue_pressed">#62a8ea</color>
+    <color name="background_green">#43bf75</color>
+    <color name="background_green_pressed">#65e79a</color>
+    <color name="background_red_pressed">#b33a02</color>
+    <color name="background_yellow_pressed">#c16c00</color>
+	<color name="background_white">#ffffff</color>
+</resources>

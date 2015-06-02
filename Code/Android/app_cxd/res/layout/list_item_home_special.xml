@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_item_background_gray"
+    android:descendantFocusability="blocksDescendants" >
+
+    <View
+        android:id="@+id/view0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_light" />
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view0" >
+
+        <ImageView
+            android:id="@+id/commentPhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/layout_margin" />
+
+        <TextView
+            android:id="@+id/commentName"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/commentPhoto"
+            android:layout_toRightOf="@+id/commentPhoto"
+            android:gravity="center"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <TextView
+            android:id="@+id/commentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/commentName"
+            android:layout_toRightOf="@+id/commentPhoto"
+            android:gravity="center"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <TextView
+            android:id="@+id/commentContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/commentPhoto"
+            android:layout_below="@+id/commentPhoto"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/fontcolor_dark"
+            android:textSize="@dimen/fontsize_middle" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout_top"
+        android:layout_margin="@dimen/layout_margin"
+        android:background="@color/line_light" />
+
+    <TextView
+        android:id="@+id/list_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/view5"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_toLeftOf="@+id/list_item_image0"
+        android:singleLine="true"
+        android:text="新闻列表一级标题"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_big" />
+
+    <ImageView
+        android:id="@+id/list_item_image0"
+        android:layout_width="@dimen/list_item_image_width"
+        android:layout_height="@dimen/list_item_image_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/list_item_title"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/layout_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/list_item_title"
+        android:layout_below="@+id/list_item_content"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/layout_margin_short"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/list_item_image1"
+                android:layout_width="@dimen/list_item_image_width"
+                android:layout_height="@dimen/list_item_image_height"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/list_item_image2"
+                android:layout_width="@dimen/list_item_image_width"
+                android:layout_height="@dimen/list_item_image_height"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/list_item_image3"
+                android:layout_width="@dimen/list_item_image_width"
+                android:layout_height="@dimen/list_item_image_height"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/list_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/list_item_title"
+        android:layout_below="@+id/list_item_title"
+        android:layout_toLeftOf="@+id/list_item_image0"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_middle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/list_item_image0"
+        android:layout_marginTop="@dimen/layout_margin_short"
+        android:background="@color/line_light" />
+
+</RelativeLayout>

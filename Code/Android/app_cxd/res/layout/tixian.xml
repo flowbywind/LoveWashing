@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_header" >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big_secondary"
+                android:layout_margin="@dimen/layout_margin_middle"
+                android:background="@drawable/btn_blue"
+                android:text="+添加银行卡"
+                android:textColor="@color/fontcolor_white"
+                android:textSize="@dimen/fontsize_big"
+                android:visibility="gone" />
+
+            <com.easylife.app_wash.widget.ScrollOverListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_margin_middle"
+                android:layout_marginTop="@dimen/layout_margin_middle"
+                android:cacheColorHint="#00000000"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big" >
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:text="账户余额："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text1"
+                    android:background="@color/background_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <View
+                    android:id="@+id/lineview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_light" />
+
+                <View
+                    android:id="@+id/lineview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_marginTop="@dimen/layout_margin_middle" >
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:text="提现金额："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <EditText
+                    android:id="@+id/tixian_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text4"
+                    android:background="@color/background_white"
+                    android:hint="请输入提现金额："
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_small" />
+
+                <TextView
+                    android:id="@+id/gendar_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/layout_margin_middle"
+                    android:gravity="center|left"
+                    android:text="元"
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <View
+                    android:id="@+id/lineview7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_light" />
+
+                <View
+                    android:id="@+id/lineview8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_marginTop="@dimen/layout_margin_middle" >
+
+                <TextView
+                    android:id="@+id/text11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:text="提现费用："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/tixian_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text11"
+                    android:background="@color/background_white"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:text="2元"
+                      android:gravity="center_vertical"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_light" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_light" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_margin_short"
+                android:gravity="center"
+                android:text="不限金额，每笔2元，工作日3分-24小时内到账"
+                android:textColor="@color/fontcolor_light"
+                android:textSize="@dimen/fontsize_score_small" />
+
+            <Button
+                android:id="@+id/tixian"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big_secondary"
+                android:layout_margin="@dimen/layout_margin_middle"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/btn_red"
+                android:text="提 现"
+                android:textColor="@color/fontcolor_white"
+                android:textSize="@dimen/fontsize_big"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

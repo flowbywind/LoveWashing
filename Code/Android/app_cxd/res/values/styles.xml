@@ -1,0 +1,127 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="Theme.UMDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- dialog窗体背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否显示蒙版 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+    <!-- 不显示蒙版 -->
+    <style name="dialog_no_dim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- dialog窗体背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否显示蒙版 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="dialog_bottom_animation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter_bottom</item>
+  		//进入时的动画                                                                                                                                              <item name="@android:windowExitAnimation">@anim/dialog_exit_bottom</item>
+	    //退出时的动画  </style>
+
+    <style name="dialog_title_style">
+
+        <!-- dialog头部样式 -->
+        <item name="android:id">@id/title</item>
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/dialog_title</item>
+    </style>
+
+    <style name="dialog_line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_marginRight">13dp</item>
+        <item name="android:background">@color/line_light</item>
+    </style>
+    <!-- @dimen/dialog_touzhu_margin -->
+    <style name="dialog_line_style_touzhu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:background">@color/line_light</item>
+    </style>
+
+    <style name="dialog_cancel_style">
+
+        <!-- dialog头部样式 -->
+        <item name="android:id">@id/cancel</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/height_small</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/btn_cancel</item>
+    </style>
+
+    <style name="dialog_ensure_style">
+
+        <!-- dialog头部样式 -->
+        <item name="android:id">@id/ensure</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/height_small</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/btn_ensure</item>
+    </style>
+
+    <style name="dialog_closebtn_style">
+
+        <!-- dialog头部关闭按钮样式 -->
+        <item name="android:id">@id/dismiss</item>
+        <item name="android:layout_width">22dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:background">@drawable/btn_dialog_close</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">13dp</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+</resources>

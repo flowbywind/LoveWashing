@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_item_background_gray"
+    android:descendantFocusability="blocksDescendants" >
+
+    <View
+        android:id="@+id/view0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_middle"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view0" >
+
+        <ImageView
+            android:id="@+id/commentPhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/layout_margin"
+             />
+
+        <TextView
+            android:id="@+id/commentName"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/commentPhoto"
+            android:layout_toRightOf="@+id/commentPhoto"
+            android:gravity="center"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <TextView
+            android:id="@+id/commentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/commentName"
+            android:layout_toRightOf="@+id/commentPhoto"
+            android:gravity="center"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <TextView
+            android:id="@+id/commentContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/commentPhoto"
+            android:layout_marginLeft="@dimen/height_middle"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/fontcolor_dark"
+            android:textSize="@dimen/fontsize_middle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_top"
+        android:layout_marginLeft="@dimen/height_list_margin"
+        android:layout_marginRight="@dimen/height_list_margin"
+        android:paddingBottom="@dimen/layout_margin" >
+
+        <ImageButton
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/layout_margin" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:gravity="center"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/nickname"
+            android:layout_below="@+id/nickname"
+            android:layout_marginTop="@dimen/layout_margin_short"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout_bottom"
+        android:background="@color/line_middle"
+        android:visibility="visible" />
+
+</RelativeLayout>

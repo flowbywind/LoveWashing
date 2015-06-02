@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fontcolor_white"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="@dimen/layout_margin" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_item_background_gray" >
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_middle"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/layout_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view0"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:layout_marginRight="@dimen/layout_margin"
+            android:paddingTop="@dimen/layout_margin" >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/image_icon"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/image"
+                android:layout_toRightOf="@+id/image"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="新三版的挂牌条件及利弊分析"
+                android:textColor="@color/fontcolor_dark"
+                android:textSize="@dimen/fontsize_big" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_alignLeft="@+id/title"
+                android:layout_below="@+id/title"
+                android:gravity="center"
+                android:text="产品经理"
+                android:textColor="@color/fontcolor_light"
+                android:textSize="@dimen/fontsize_small" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_alignBottom="@+id/name"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="50分钟前"
+                android:textColor="@color/fontcolor_light"
+                android:textSize="@dimen/fontsize_small" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_image"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:layout_marginRight="@dimen/layout_margin"
+            android:layout_marginTop="@dimen/layout_margin_short"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/pic0"
+                    android:layout_width="@dimen/list_item_image_width"
+                    android:layout_height="@dimen/list_item_image_height"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/pic1"
+                    android:layout_width="@dimen/list_item_image_width"
+                    android:layout_height="@dimen/list_item_image_height"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/pic2"
+                    android:layout_width="@dimen/list_item_image_width"
+                    android:layout_height="@dimen/list_item_image_height"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layout_image"
+            android:layout_alignRight="@+id/layout_image"
+            android:layout_below="@+id/layout_pic"
+            android:layout_marginTop="@dimen/layout_margin_short" >
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_light2" />
+
+            <TextView
+                android:id="@+id/list_item_content_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="@dimen/layout_margin_short"
+                android:lineSpacingExtra="3dp"
+                android:text="小李:"
+                android:textColor="@color/fontcolor_blue"
+                android:textSize="@dimen/fontsize_small" />
+
+            <TextView
+                android:id="@+id/answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_marginLeft="@dimen/layout_margin_short"
+                android:layout_marginTop="@dimen/layout_margin_short"
+                android:layout_toRightOf="@+id/list_item_content_name"
+                android:lineSpacingExtra="3dp"
+                android:text="回答内容"
+                android:textColor="@color/fontcolor_light"
+                android:textSize="@dimen/fontsize_small" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/layout_image"
+            android:layout_alignRight="@+id/layout_image"
+            android:layout_below="@+id/layout_comment"
+            android:layout_marginTop="@dimen/layout_margin_short"
+            android:background="@color/line_light" />
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_marginTop="@dimen/layout_margin_short" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/btn_collection"
+                    android:gravity="left|center"
+                    android:text="收藏"
+                    android:textColor="@color/fontcolor_light"
+                    android:textSize="@dimen/fontsize_small" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/expert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/btn_expert"
+                    android:gravity="left|center"
+                    android:text="邀专家"
+                    android:textColor="@color/fontcolor_light"
+                    android:textSize="@dimen/fontsize_small" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/btn_message"
+                    android:gravity="left|center"
+                    android:text="回答"
+                    android:textColor="@color/fontcolor_light"
+                    android:textSize="@dimen/fontsize_small" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/btn_praise"
+                    android:gravity="left|center"
+                    android:src="@drawable/praise_icon"
+                    android:text="赞 "
+                    android:textColor="@color/fontcolor_light"
+                    android:textSize="@dimen/fontsize_small" >
+                </Button>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/layout_bottom"
+            android:layout_marginTop="@dimen/layout_margin_short"
+            android:background="@color/line_middle" />
+    </RelativeLayout>
+
+</RelativeLayout>

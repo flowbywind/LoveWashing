@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/height_small" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享至"
+            android:textColor="@color/fontcolor_dark"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <RelativeLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title" >
+
+            <Button
+                android:id="@+id/share2friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/btn_weixin_circle"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/share2zoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/btn_qzone" />
+
+            <Button
+                android:id="@+id/share2weibo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/btn_qq"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/layout_top"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:background="@color/line_light" />
+
+        <Button
+            android:id="@+id/dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/collection"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/collection"
+            android:layout_below="@+id/view0"
+            android:background="@null"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <Button
+            android:id="@+id/collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view0"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:background="@null"
+            android:drawableLeft="@drawable/collection_icon"
+            android:gravity="center"
+            android:text="收藏"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+    </RelativeLayout>
+
+</RelativeLayout>
