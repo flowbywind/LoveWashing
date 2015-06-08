@@ -1,0 +1,8 @@
+1，src：包含了ABP中项目源码，以及一些测试源码
+2，EasyLife.Application：
+3，EasyLife.Core：
+4，EasyLife.EntityFramework：
+5，EasyLife.NHibernate：
+6，EasyLife.Resource：静态资源站点
+7，EasyLife.Web
+8，EasyLife.WebApi：

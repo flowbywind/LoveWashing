@@ -1,0 +1,174 @@
+DEBUG 2014-12-14 13:40:15,146 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2014-12-14 13:40:16,154 [1    ] Abp.Modules.DefaultModuleFinder          - Found 11 ABP modules in total.
+DEBUG 2014-12-14 13:40:16,159 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.4.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,160 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpCoreModule, Abp, Version=0.4.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,160 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.4.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.4.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.4.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.4.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-12-14 13:40:16,164 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2014-12-14 13:40:16,848 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-02-12 21:33:35,236 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-02-12 21:33:37,745 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-02-12 21:33:37,749 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,752 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,752 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-12 21:33:37,754 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-02-12 21:33:39,106 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-03-06 23:05:59,511 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-03-06 23:06:00,778 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-03-06 23:06:00,782 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,783 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-06 23:06:00,787 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-03-06 23:06:01,719 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-03-06 23:06:03,110 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-03-06 23:06:03,151 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyLife
+DEBUG 2015-03-06 23:06:03,152 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-05-07 22:16:23,725 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-05-07 22:16:24,926 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-05-07 22:16:24,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:16:24,934 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-05-07 22:16:25,774 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-05-07 22:16:27,073 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-05-07 22:16:27,078 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyLife
+DEBUG 2015-05-07 22:16:27,079 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-05-07 22:29:25,175 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-05-07 22:29:26,014 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-05-07 22:29:26,017 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,018 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:29:26,022 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-05-07 22:29:26,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-05-07 22:29:27,453 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-05-07 22:29:27,457 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyLife
+DEBUG 2015-05-07 22:29:27,458 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-05-07 22:32:17,354 [33   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-05-07 22:32:18,147 [33   ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-05-07 22:32:18,150 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,151 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,152 [33   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-05-07 22:32:18,155 [33   ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-05-07 22:32:18,667 [33   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-05-07 22:32:19,419 [33   ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-05-07 22:32:19,423 [33   ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyLife
+DEBUG 2015-05-07 22:32:19,424 [33   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-06-03 23:46:57,158 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-06-03 23:46:59,336 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-06-03 23:46:59,341 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,343 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,343 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,344 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,344 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,344 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,344 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,344 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,344 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,345 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,345 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-03 23:46:59,348 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-06-03 23:47:00,496 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-06-03 23:47:03,475 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-06-03 23:47:03,507 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyLife
+DEBUG 2015-06-03 23:47:03,508 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-06-04 09:45:30,729 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-06-04 09:45:33,668 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-06-04 09:45:33,675 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,679 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,679 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,679 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,681 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,681 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 09:45:33,686 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-06-04 09:45:34,930 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-06-04 09:45:38,800 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-06-04 09:45:38,816 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyLife
+DEBUG 2015-06-04 09:45:38,817 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-06-04 15:53:24,184 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-06-04 15:53:26,624 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-06-04 15:53:26,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,637 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,641 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 15:53:26,648 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-06-04 15:53:28,009 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-06-04 15:53:30,774 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-06-04 15:53:30,782 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyLife
+DEBUG 2015-06-04 15:53:30,783 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-06-04 16:48:26,038 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-06-04 16:48:27,882 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2015-06-04 16:48:27,891 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,893 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,893 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeApplicationModule, EasyLife.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeCoreModule, EasyLife.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeDataModule, EasyLife.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.Web.EasyLifeWebModule, EasyLife.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyLife.EasyLifeWebApiModule, EasyLife.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-04 16:48:27,909 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2015-06-04 16:48:29,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-06-04 16:48:31,242 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-06-04 16:48:31,249 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyLife
+DEBUG 2015-06-04 16:48:31,250 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb

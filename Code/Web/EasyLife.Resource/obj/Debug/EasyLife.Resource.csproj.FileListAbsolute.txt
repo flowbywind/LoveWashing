@@ -1,0 +1,12 @@
+H:\ABP\EntityFramework\EasyLife\EasyLife.Resource\bin\EasyLife.Resource.dll.config
+H:\ABP\EntityFramework\EasyLife\EasyLife.Resource\bin\EasyLife.Resource.dll
+H:\ABP\EntityFramework\EasyLife\EasyLife.Resource\bin\EasyLife.Resource.pdb
+H:\ABP\EntityFramework\EasyLife\EasyLife.Resource\obj\Debug\EasyLife.Resource.csprojResolveAssemblyReference.cache
+H:\ABP\EntityFramework\EasyLife\EasyLife.Resource\obj\Debug\EasyLife.Resource.dll
+H:\ABP\EntityFramework\EasyLife\EasyLife.Resource\obj\Debug\EasyLife.Resource.pdb
+F:\ABP\easylife\EasyLife\EasyLife.Resource\bin\EasyLife.Resource.dll.config
+F:\ABP\easylife\EasyLife\EasyLife.Resource\bin\EasyLife.Resource.dll
+F:\ABP\easylife\EasyLife\EasyLife.Resource\bin\EasyLife.Resource.pdb
+F:\ABP\easylife\EasyLife\EasyLife.Resource\obj\Debug\EasyLife.Resource.csprojResolveAssemblyReference.cache
+F:\ABP\easylife\EasyLife\EasyLife.Resource\obj\Debug\EasyLife.Resource.dll
+F:\ABP\easylife\EasyLife\EasyLife.Resource\obj\Debug\EasyLife.Resource.pdb
