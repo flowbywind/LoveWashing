@@ -93,7 +93,7 @@ public class BaseClientAPI {
 		// }
 		// String sign = MD5Util.MD5Encode(HttpUtil.convertParameter(signMap) +
 		Map<String, String> totalMap = new HashMap<String, String>();// 签名用
-		input.put("merchantId", 1);
+		input.put("merchantId", "1");
 
 //		for (String key : input.keySet()) {
 //			totalMap.put(key, "" + input.get(key));
