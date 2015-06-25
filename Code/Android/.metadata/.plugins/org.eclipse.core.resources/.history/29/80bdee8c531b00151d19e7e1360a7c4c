@@ -197,7 +197,6 @@ public class MultiPartStack extends HurlStack {
 				.getStringUploads();
 		if (stringUpload != null) {
 			String json = stringUpload.get("value");
-			 Log.d("cxd", "jsonRequest=" + json);
 			try {
 				StringEntity entity = new StringEntity(json);
 				httpRequest.setEntity(entity);
