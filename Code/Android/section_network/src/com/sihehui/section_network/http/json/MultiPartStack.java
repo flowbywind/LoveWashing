@@ -10,6 +10,7 @@ import org.apache.commons.httpclient.params.HttpMethodParams;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -22,7 +23,6 @@ import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HTTP;
 
 import android.util.Log;
 
@@ -166,9 +166,7 @@ public class MultiPartStack extends HurlStack {
 		// Iterate the fileUploads
 		Map<String, Object> fileUpload = ((MultiPartRequest) request)
 				.getFileUploads();
-		// Log.d("shh", "fileUpload=" + fileUpload);
 		if (fileUpload != null) {
-			// Log.d("shh", "fileUpload.get()=" + fileUpload.get("avatarFile"));
 			if (fileUpload != null) {
 				Set<String> set = fileUpload.keySet();
 				for (Iterator<String> iterator = set.iterator(); iterator
@@ -191,40 +189,10 @@ public class MultiPartStack extends HurlStack {
 
 				}
 			}
-			// for (Map.Entry<String, File> entry : fileUpload.entrySet()) {
-			//
-			// builder.addPart(((String) entry.getKey()), new FileBody(
-			// (File) entry.getValue()));
-			// }
 		}
-		 ContentType contentType = ContentType.create(HTTP.CONTENT_ENCODING,
-		 HTTP.UTF_8);
 		// Iterate the stringUploads
 		Map<String, String> stringUpload = ((MultiPartRequest) request)
 				.getStringUploads();
-		// Log.d("shh",
-		// "stringUpload.get(userAccount)="
-		// + stringUpload.get("userAccout"));
-		// Set<String> set = stringUpload.keySet();
-		// for (Iterator<String> iterator = set.iterator(); iterator.hasNext();)
-		// {
-		// String key = (String) iterator.next();
-		// Object obj = stringUpload.get(key);
-		// Log.d("shh", "key=" + key);
-		// Log.d("shh", "obj=" + obj.toString());
-		// if (obj instanceof String) {
-		// builder.addTextBody(key, obj.toString(),
-		// ContentType.APPLICATION_JSON);
-		// } else if (obj instanceof File) {
-		// builder.addBinaryBody(key, (File) obj);
-		// } else if (obj instanceof File[]) {
-		// File[] files = (File[]) obj;
-		// for (int i = 0; i < files.length; i++) {
-		// builder.addBinaryBody(key, files[i]);
-		// }
-		// }
-		//
-		// }
 		if (stringUpload != null) {
 			for (Map.Entry<String, String> entry : stringUpload.entrySet()) {
 				Log.d("cxd", "stringUpload.entry.getKey()=" + entry.getKey()
@@ -236,11 +204,11 @@ public class MultiPartStack extends HurlStack {
 					e.printStackTrace();
 				}
 			}
-			// httpRequest.addHeader("contentType", "application/json");
+			// Log.d("cxd", "builder.toString()=" + builder.toString());
 			httpRequest.setEntity(builder.build());
+			// UrlEncodedFormEntity p_entity = new UrlEncodedFormEntity(pairs,
+			// "utf-8");
 
-			// httpRequest.getParams().setParameter(HTTP.CONTENT_ENCODING,
-			// HTTP.UTF_8);
 		}
 	}
 }

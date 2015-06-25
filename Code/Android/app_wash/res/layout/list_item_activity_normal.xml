@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/line_light"
+    android:descendantFocusability="blocksDescendants" >
+
+    <!-- android:paddingBottom="@dimen/layout_margin_short" -->
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/height_small"
+        android:layout_marginRight="@dimen/height_small" >
+
+        <TextView
+            android:id="@+id/ad_date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_big_secondary"
+            android:gravity="center"
+            android:text="活动日期：2014-11-2 至 2014-11-12"
+            android:textColor="@color/fontcolor_dark"
+            android:textSize="@dimen/fontsize_small"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/background_green"
+            android:padding="1dp"
+            android:text="官方活动"
+            android:textColor="@color/fontcolor_white"
+            android:textSize="@dimen/fontsize_score_small"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ad_image"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/ad_date"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+</RelativeLayout>

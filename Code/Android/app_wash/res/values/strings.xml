@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">爱洗衣</string>
+    <string name="refresh_down_text">下拉可刷新</string>
+    <string name="refresh_release_text">松开可刷新</string>
+    <string name="desc_download">downloding: app_wash for android </string>
+    <string name="host_resource">192.168.1.106</string>
+    <string name="host">192.168.1.106/api/services/app/</string>
+    <!-- 123.57.51.100:8088/cxd/app/publicRequest -->
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装移动快捷支付，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="loginnamehint">用户名/手机号/邮箱</string>
+    <string name="loginpwdhint">密  码</string>
+    <string name="loginbtn">登  录</string>
+    <string name="registbtn">注  册</string>
+    <string name="forgetpwd">忘记密码</string>
+    <string name="huankuan_jihua"><u>还款计划>></u></string>
+    <string name="huankuan_hetong"><u>借款合同>></u></string>
+
+</resources>

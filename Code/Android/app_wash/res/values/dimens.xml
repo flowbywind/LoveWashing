@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- 字体的五种大小 -->
+    <dimen name="fontsize_money_big">30sp</dimen>
+    <dimen name="fontsize_score_big">21sp</dimen>
+    <dimen name="fontsize_score_small">13sp</dimen>
+    <dimen name="fontsize_middle">16sp</dimen>
+    <dimen name="fontsize_big">17sp</dimen>
+    <dimen name="fontsize_small">14sp</dimen>
+    <!-- 常用的五种高度 -->
+    <dimen name="height_edit">240dp</dimen>
+    <dimen name="height_middle">24dp</dimen>
+    <dimen name="height_big">48dp</dimen>
+    <dimen name="height_big_secondary">40dp</dimen>
+    <dimen name="height_small">16dp</dimen>
+    <dimen name="height_list_margin">15dp</dimen>
+    <!-- 间距 -->
+    <dimen name="layout_margin_long">30dp</dimen>
+    <dimen name="layout_margin_middle">20dp</dimen>
+    <dimen name="layout_margin">10dp</dimen>
+    <dimen name="layout_margin_short">5dp</dimen>
+    <!-- 详情行高 -->
+    <dimen name="ticket_detail_height">30dp</dimen>
+
+    <!-- 列表中图片的大小 -->
+    <dimen name="list_item_image_width">95dp</dimen>
+    <dimen name="list_item_image_height">75dp</dimen>
+
+</resources>

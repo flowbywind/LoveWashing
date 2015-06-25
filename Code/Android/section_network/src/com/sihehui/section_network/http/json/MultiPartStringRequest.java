@@ -115,10 +115,10 @@ public class MultiPartStringRequest extends Request<JSONObject> implements
 			// JSONObject errors = result.optJSONObject("resultMessage");
 			// Log.d("shh", "errors=" + errors);
 
-			if (result != null && !result.isNull("resultMessage")) {// 错误处理
+			if (result != null && !result.isNull("message")) {// 错误处理
 				return Response.error(new ProcessError(result
-						.optString("resultMessage"), result
-						.optString("resultMessage")));
+						.optString("message"), result
+						.optString("message")));
 			}
 			// String resultMessage=result.optString("resultMessage");
 			// String ret = result.optString("result");

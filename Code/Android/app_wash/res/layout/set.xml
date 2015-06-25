@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_header" />
+
+    <View
+        android:id="@+id/view0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/list_set"
+        android:layout_alignRight="@+id/list_set"
+        android:layout_below="@+id/include_title"
+        android:layout_marginTop="@dimen/height_big_secondary"
+        android:background="@color/line_light" />
+
+    <ListView
+        android:id="@+id/list_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view0"
+        android:layout_marginLeft="@dimen/height_small"
+        android:layout_marginRight="@dimen/height_small"
+        android:background="@null"
+        android:divider="@color/line_light"
+        android:dividerHeight="1dp"
+        android:scrollbars="none" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/list_set"
+        android:layout_alignRight="@+id/list_set"
+        android:layout_below="@+id/list_set"
+        android:background="@color/line_light" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big_secondary"
+        android:layout_alignLeft="@+id/list_set"
+        android:layout_alignRight="@+id/list_set"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="@dimen/height_big"
+        android:background="@drawable/btn_blue"
+        android:text="退出登录"
+        android:textColor="@color/fontcolor_white"
+        android:textSize="@dimen/fontsize_big" />
+
+</RelativeLayout>

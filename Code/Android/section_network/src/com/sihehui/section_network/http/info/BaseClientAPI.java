@@ -93,11 +93,16 @@ public class BaseClientAPI {
 		// }
 		// String sign = MD5Util.MD5Encode(HttpUtil.convertParameter(signMap) +
 		Map<String, String> totalMap = new HashMap<String, String>();// 签名用
-		totalMap.put("value", Util.map2Json(input));
-		totalMap.put("sName", uri);
-//		totalMap.put("sName", Contacts.ServiceURL.CXD_AuthCode);
+		input.put("merchantId", "1");
+
+		for (String key : input.keySet()) {
+			totalMap.put(key, "" + input.get(key));
+		}
+		// totalMap.put("value", Util.map2Json(input));
+		// totalMap.put("sName", uri);
+		// totalMap.put("sName", Contacts.ServiceURL.CXD_AuthCode);
 		// getStandardURL(context, uri, totalMap)
-		String url = Contacts.getInstance(context).SERVER;
+		String url = Contacts.getInstance(context).SERVER + uri;
 		System.out.println("url:" + url);
 		addJSONObjectRequest(url, null, totalMap, listener, failureListener);
 

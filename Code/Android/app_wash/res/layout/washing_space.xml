@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_light2" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/fontcolor_skyblue" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:scaleType="center"
+            android:src="@drawable/icon_image" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big"
+            android:layout_below="@+id/image"
+            android:gravity="center"
+            android:text="登录/注册"
+            android:textColor="@color/fontcolor_white"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_margin_middle"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:background="@color/fontcolor_lighter" />
+
+    <com.easylife.app_wash.widget.ListViewForScrollView
+        android:id="@+id/myList1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view0"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/fontcolor_lighter"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false"
+        android:scrollbars="none" >
+    </com.easylife.app_wash.widget.ListViewForScrollView>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/myList1"
+        android:background="@color/fontcolor_lighter" />
+
+     <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:background="@color/fontcolor_lighter" />
+
+    <com.easylife.app_wash.widget.ListViewForScrollView
+        android:id="@+id/myList2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view0"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/fontcolor_lighter"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false"
+        android:scrollbars="none" >
+    </com.easylife.app_wash.widget.ListViewForScrollView>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/myList2"
+        android:background="@color/fontcolor_lighter" />
+     <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:background="@color/fontcolor_lighter" />
+
+    <com.easylife.app_wash.widget.ListViewForScrollView
+        android:id="@+id/myList3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view4"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/fontcolor_lighter"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false"
+        android:scrollbars="none" >
+    </com.easylife.app_wash.widget.ListViewForScrollView>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/myList3"
+        android:background="@color/fontcolor_lighter" />
+    
+</RelativeLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/include_title"
+                layout="@layout/common_header" />
+
+            <RelativeLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/include_title"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="项 目："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text1"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <View
+                    android:id="@+id/lineview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_light" />
+
+                <View
+                    android:id="@+id/lineview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/layout_content"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="年收益："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/profit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text2"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_small" />
+
+                <View
+                    android:id="@+id/lineview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_light" />
+
+                <View
+                    android:id="@+id/lineview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/layout_content1"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="期 限："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text3"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="esdsjdksj"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_small" />
+
+                <View
+                    android:id="@+id/lineview5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_light" />
+
+                <View
+                    android:id="@+id/lineview6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/layout_content2"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="金 额："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <EditText
+                    android:id="@+id/money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text4"
+                    android:background="@color/background_white"
+                    android:hint="输入金额 最多50,000元"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_small" />
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/layout_margin"
+                    android:gravity="center|left"
+                    android:text="元"
+                    android:inputType="number"
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <View
+                    android:id="@+id/lineview7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_light" />
+
+                <View
+                    android:id="@+id/lineview8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_light" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_content3"
+                android:layout_marginTop="@dimen/layout_margin_short"
+                android:gravity="center"
+                android:text="最小投资金额：100元    递增金额：100元" />
+
+            <Button
+                android:id="@+id/btnok"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/desc"
+                android:layout_marginLeft="@dimen/layout_margin_long"
+                android:layout_marginRight="@dimen/layout_margin_long"
+                android:layout_marginTop="@dimen/layout_margin_middle"
+                android:background="@drawable/btn_red"
+                android:text="确  认"
+                android:textColor="@color/fontcolor_white"
+                android:textSize="@dimen/fontsize_big" >
+            </Button>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="line_light" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="line_light"/>
+			<item value="setFocus"/>
+			<item value="mServerCxdAPI"/>
+			<item value="mHomeFragment"/>
+			<item value="com.yunbizhi.app_ybz"/>
+			<item value="result.getDataList()"/>
+			<item value="result.getHasNextPage()"/>
+			<item value="NormalDataVO"/>
+		</list>
+		<list key="replacehistory">
+			<item value="fontcolor_lighter"/>
+			<item value="com.easylife.app_wash"/>
+			<item value="result"/>
+			<item value="true"/>
+			<item value="WashingVO"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="369" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="501" key="DIALOG_HEIGHT"/>
+		<item value="191" key="DIALOG_X_ORIGIN"/>
+		<item value="137" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

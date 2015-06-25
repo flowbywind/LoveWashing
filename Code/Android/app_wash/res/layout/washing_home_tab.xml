@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:background="@drawable/top_bg"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_score_big" />
+
+    <RelativeLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big_secondary"
+        android:layout_below="@+id/title" >
+
+        <TableRow
+            android:id="@+id/tabTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tab_background"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tabTitle1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@drawable/btn_tab_text_color"
+                android:textSize="@dimen/fontsize_small" />
+
+            <TextView
+                android:id="@+id/tabTitle2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="企业"
+                android:textColor="@drawable/btn_tab_text_color"
+                android:textSize="@dimen/fontsize_small" />
+
+            <TextView
+                android:id="@+id/tabTitle3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="行业"
+                android:textColor="@drawable/btn_tab_text_color"
+                android:textSize="@dimen/fontsize_small" />
+
+            <TextView
+                android:id="@+id/tabTitle4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="O2O"
+                android:textColor="@drawable/btn_tab_text_color"
+                android:textSize="@dimen/fontsize_small" />
+
+            <TextView
+                android:id="@+id/tabTitle5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="干货"
+                android:textColor="@drawable/btn_tab_text_color"
+                android:textSize="@dimen/fontsize_small" />
+        </TableRow>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tableLayout"
+        android:background="@color/line_middle" />
+    <!-- com.yunbizhi.app_ybz.view.Home -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/line" />
+
+</RelativeLayout>

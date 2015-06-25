@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background_white" >
+
+    <Button
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/default_image" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/image"
+        android:text="T恤"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_big" />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="2dp"
+        android:background="@color/fontcolor_skyblue"
+        android:padding="1dp"
+        android:text="7.5折"
+        android:textColor="@color/fontcolor_white"
+        android:textSize="@dimen/fontsize_score_small" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/discount"
+        android:layout_marginTop="2dp"
+        android:text="￥16"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_score_small" />
+
+    <View
+        android:id="@+id/black_line"
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignRight="@+id/money"
+        android:layout_below="@+id/money"
+        android:layout_marginTop="-8dp"
+        android:background="@color/fontcolor_dark" />
+
+    <TextView
+        android:id="@+id/pay_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/money"
+        android:layout_marginLeft="@dimen/height_list_margin"
+        android:layout_toRightOf="@+id/money"
+        android:text="￥12"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/height_list_margin" />
+<View
+    android:layout_height="15dp"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/pay_money"
+    />
+</RelativeLayout>

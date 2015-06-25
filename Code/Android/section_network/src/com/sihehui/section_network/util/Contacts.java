@@ -12,6 +12,8 @@ public class Contacts {
 
 	public static final class ServiceURL {
 
+		public static final String QueryGoods = "Goods/QueryGoods?";// 首页商品列表
+
 		public static final String BannerService = "bannerAppService";// 首页轮播图片
 		public static final String CXD_AuthCode = "authCodeAppService";// 注册时获取验证码接口
 		public static final String RegisterService = "registerAppService";// 用户注册
@@ -39,10 +41,10 @@ public class Contacts {
 		public static final String WithdrawAppService = "withdrawAppService";// 16.
 																				// 提现
 		public static final String RepayPlanAppService = "repayPlanAppService";// 投资还款计划
-		public static final String BindCardQueryAppService="bindCardQueryAppService";//我的银行卡
-		public static final String ArticeAppService="articeAppService";//文章查询
-		public static final String ReferrerAppService="referrerAppService";//推荐人管理
-		public static final String ActivityAppService="activityAppService";//活动
+		public static final String BindCardQueryAppService = "bindCardQueryAppService";// 我的银行卡
+		public static final String ArticeAppService = "articeAppService";// 文章查询
+		public static final String ReferrerAppService = "referrerAppService";// 推荐人管理
+		public static final String ActivityAppService = "activityAppService";// 活动
 
 		public static final String GET_VERSION = "/outside/version/getVersion.json?";
 		public static final String REGIST_APPLY = "/outside/register/apply.json";// 注册时获取验证码接口

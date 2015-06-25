@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_header" >
+    </include>
+
+    <TextView
+        android:id="@+id/remark1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big_secondary"
+        android:layout_below="@+id/include_title"
+        android:gravity="center"
+        android:text="手机号码注册"
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_small" />
+
+    <RelativeLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:layout_below="@+id/remark1" >
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_white"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:paddingLeft="@dimen/layout_margin_middle"
+            android:textColorHint="@color/line_middle"
+            android:textSize="@dimen/fontsize_small" >
+        </EditText>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/line_light" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_light" >
+        </View>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:layout_below="@+id/layout_phone"
+        android:layout_marginLeft="@dimen/layout_margin_middle"
+        android:layout_marginRight="@dimen/layout_margin_middle"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:background="@drawable/btn_red"
+        android:text="下一步"
+        android:textColor="@color/fontcolor_white"
+        android:textSize="@dimen/fontsize_big" >
+    </Button>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big_secondary"
+        android:layout_below="@+id/next"
+        android:gravity="center"
+        android:text="诚信贷承诺不会在任何地方泄露您的手机号码"
+        android:textColor="@color/fontcolor_lighter"
+        android:textSize="@dimen/fontsize_small" >
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fontcolor_white"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/layout_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/height_small"
+        android:layout_marginRight="@dimen/height_small"
+        android:paddingTop="@dimen/layout_margin" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/default_img"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:layout_toRightOf="@+id/image"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="许可小米"
+            android:textColor="@color/fontcolor_blue"
+            android:textSize="@dimen/fontsize_score_small" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/nickname"
+            android:layout_below="@+id/nickname"
+            android:layout_alignBottom="@+id/image"
+            android:gravity="center"
+            android:text="50分钟前"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/date"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/height_small"
+            android:background="@null"
+            android:drawableRight="@drawable/btn_praise"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="5123"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_middle" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/layout_image"
+        android:layout_alignRight="@+id/layout_image"
+        android:layout_below="@+id/layout_image"
+        android:layout_marginTop="@dimen/layout_margin_short"
+        android:lineSpacingExtra="3dp"
+        android:text=""
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_score_small" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/layout_image"
+        android:layout_alignRight="@+id/layout_image"
+        android:layout_below="@+id/content"
+        android:layout_marginTop="@dimen/layout_margin_short"
+        android:background="@color/line_light" />
+
+</RelativeLayout>

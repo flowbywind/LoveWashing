@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_header" />
+
+    <EditText
+        android:id="@+id/txt_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_edit"
+        android:layout_below="@+id/include_title"
+        android:layout_marginLeft="@dimen/height_small"
+        android:layout_marginRight="@dimen/height_small"
+        android:layout_marginTop="@dimen/height_middle"
+        android:background="@drawable/edittext_selector"
+        android:hint="请输入您的宝贵意见 "
+        android:textColorHint="@color/fontcolor_lighter"
+        android:textSize="@dimen/fontsize_small"
+        android:gravity="top" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:layout_below="@+id/txt_suggest"
+        android:layout_marginLeft="@dimen/height_middle"
+        android:layout_marginRight="@dimen/height_middle"
+        android:layout_marginTop="@dimen/height_middle"
+        android:background="@drawable/btn_red"
+        android:text="提交"
+        android:textColor="@color/fontcolor_white"
+        android:textSize="@dimen/fontsize_big" >
+    </Button>
+
+</RelativeLayout>

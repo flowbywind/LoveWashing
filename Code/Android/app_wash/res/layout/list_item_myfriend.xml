@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_big"
+    android:background="@drawable/btn_item_background_gray"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/list_myfriend_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/height_small" />
+
+    <TextView
+        android:id="@+id/list_myfriend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_big"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/height_small"
+        android:layout_toRightOf="@+id/list_myfriend_image"
+        android:gravity="center"
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_middle" />
+
+    <Button
+        android:id="@+id/list_myfriend_status"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/height_small"
+        android:background="@drawable/btn_green"
+        android:gravity="center"
+        android:text="接受"
+        android:textColor="@color/fontcolor_white"
+        android:textSize="@dimen/fontsize_small" />
+
+</RelativeLayout>

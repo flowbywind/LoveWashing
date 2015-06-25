@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:background="@color/fontcolor_skyblue"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/fontcolor_white"
+        android:textSize="@dimen/fontsize_score_big" />
+
+    <TableRow
+        android:id="@+id/tabTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin_short"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tabTitle1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab1"
+            android:gravity="center"
+            android:text="上衣类"
+            android:textColor="@drawable/btn_tab_text_color"
+            android:textSize="@dimen/fontsize_small" />
+
+        <TextView
+            android:id="@+id/tabTitle2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab2"
+            android:gravity="center"
+            android:text="裤类"
+            android:textColor="@drawable/btn_tab_text_color"
+            android:textSize="@dimen/fontsize_small" />
+
+        <TextView
+            android:id="@+id/tabTitle3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab3"
+            android:gravity="center"
+            android:text="家居类"
+            android:textColor="@drawable/btn_tab_text_color"
+            android:textSize="@dimen/fontsize_small" />
+
+        <TextView
+            android:id="@+id/tabTitle4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab4"
+            android:gravity="center"
+            android:text="外套类"
+            android:textColor="@drawable/btn_tab_text_color"
+            android:textSize="@dimen/fontsize_small" />
+
+        <TextView
+            android:id="@+id/tabTitle5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab5"
+            android:gravity="center"
+            android:text="改衣服"
+            android:textColor="@drawable/btn_tab_text_color"
+            android:textSize="@dimen/fontsize_small" />
+    </TableRow>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/tabTitleLayout"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin_short" >
+
+        <ImageView
+            android:id="@+id/tab_bottom1"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/tab_bottom1" />
+
+        <ImageView
+            android:id="@+id/tab_bottom2"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/tab_bottom2"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/tab_bottom3"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/tab_bottom3"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/tab_bottom4"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/tab_bottom4"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/tab_bottom5"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/tab_bottom5"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/layout_bottom"
+        android:layout_marginTop="@dimen/layout_margin_short"
+        android:background="@color/line_light2" />
+    <!-- com.yunbizhi.app_ybz.view.Home -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/line" />
+
+</RelativeLayout>
