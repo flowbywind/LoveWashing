@@ -1,0 +1,13 @@
+package com.sihehui.section_vo.vo;
+
+public class WashingVO {
+	private String imageUrl;
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+}

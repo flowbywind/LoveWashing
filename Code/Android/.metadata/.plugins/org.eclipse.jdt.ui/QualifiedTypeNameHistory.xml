@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.easylife.app_wash.widget.BaseWashingFragment"/>
+<fullyQualifiedTypeName name="android.provider.Contacts"/>
+<fullyQualifiedTypeName name="com.sihehui.section_network.util.Contacts"/>
+<fullyQualifiedTypeName name="com.sihehui.section_network.http.info.ConnectionNetworkAbleBase"/>
+<fullyQualifiedTypeName name="com.sihehui.section_vo.vo.WashingVO"/>
+<fullyQualifiedTypeName name="com.sihehui.section_network.util.Contacts.ServiceURL"/>
+<fullyQualifiedTypeName name="com.easylife.app_wash.R"/>
+<fullyQualifiedTypeName name="com.easylife.app_wash.view.WashingHomeFragment"/>
+<fullyQualifiedTypeName name="com.easylife.app_wash.widget.BaseFragment"/>
+</qualifiedTypeNameHistroy>

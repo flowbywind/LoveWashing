@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;WashingHomeFragment.java&apos; to &apos;com.easylife.app_wash.view.WashingHomeFragment.java&apos;&#x0D;&#x0A;- Original project: &apos;app_cxd&apos;&#x0D;&#x0A;- Destination element: &apos;com.easylife.app_wash.view.WashingHomeFragment.java&apos;&#x0D;&#x0A;- Original element: &apos;com.easylife.app_wash.view.WashingHomeFragment.java&apos;" description="Copy compilation unit" destination="/src&lt;com.easylife.app_wash.view{WashingHomeFragment.java" element1="/src&lt;com.easylife.app_wash.view{WashingHomeFragment.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1434184373718" units="1" version="1.0"/>
+</session>

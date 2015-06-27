@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_white" >
+
+    <ImageView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:scaleType="center"
+        android:src="@drawable/icon_jianhang" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:layout_toRightOf="@+id/type"
+        android:text="中国建设银行"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_middle" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="-8dp"
+        android:paddingBottom="@dimen/layout_margin"
+        android:text="1233445****6789"
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/number"
+        android:background="@color/fontcolor_white" />
+
+</RelativeLayout>

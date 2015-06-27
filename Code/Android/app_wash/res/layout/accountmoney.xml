@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_header" >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_title"
+        android:layout_marginTop="@dimen/layout_margin" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/relative0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:background="@drawable/bg_kuang" >
+
+                <LinearLayout
+                    android:id="@+id/layout_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_1"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="¥12343443.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="借款金额"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="1px"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:background="@drawable/line_vertical_long" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_balanceAvaliable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="¥1233.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="可用金额"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/layout_01"
+                    android:layout_marginLeft="@dimen/layout_margin_short"
+                    android:layout_marginRight="@dimen/layout_margin_short"
+                    android:background="@drawable/line_vertical_long" />
+
+                <LinearLayout
+                    android:id="@+id/layout_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_2"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_collectCorpusAndInterest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="¥123.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="待收本息"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="1px"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:background="@drawable/line_vertical_long" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="96dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_freezeAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="¥123478787.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="冻结资金"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/layout_02"
+                    android:background="@drawable/line_vertical_long" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative0"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/bg_kuang" >
+
+                <LinearLayout
+                    android:id="@+id/layout_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_totalInvestAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="¥1236543.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="累计投资额"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:background="@drawable/line_vertical_long" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_collectProfit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="¥16565443.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="预计总收益"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view13"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/layout_12"
+                    android:layout_marginLeft="@dimen/layout_margin_short"
+                    android:layout_marginRight="@dimen/layout_margin_short"
+                    android:background="@drawable/line_vertical_long" />
+
+                <LinearLayout
+                    android:id="@+id/layout_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view13"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_receivedCorpus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="¥56565443.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="已收本金"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:background="@drawable/line_vertical_long" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="96dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_receviedInterest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="¥65443.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="已收利息"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/layout_11"
+                    android:layout_marginLeft="@dimen/layout_margin_short"
+                    android:layout_marginRight="@dimen/layout_margin_short"
+                    android:background="@drawable/line_vertical_long" />
+
+                <LinearLayout
+                    android:id="@+id/layout_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view12"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_collectCorpus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="¥45453.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="待收本金"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="70dp"
+                        android:background="@drawable/line_vertical_long" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="96dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_collectInterest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="¥99443.2"
+                            android:textColor="@color/fontcolor_blue"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="待收利息"
+                            android:textColor="@color/fontcolor_light"
+                            android:textSize="@dimen/fontsize_score_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/layout_13"
+                    android:background="@drawable/line_vertical_long" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

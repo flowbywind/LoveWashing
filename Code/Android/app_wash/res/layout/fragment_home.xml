@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:background="@drawable/top_bg"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_big" />
+
+    <com.easylife.app_wash.widget.StickyLayout
+        android:id="@+id/sticky_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/bg_home"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:background="#78A524"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.easylife.app_wash.widget.MyViewPager
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/adLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/layout_margin"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/layout_select"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big_secondary"
+                layout="@layout/list_group" />
+
+          <include
+                android:id="@+id/tab_list_pull_down"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/layout_margin"
+                layout="@layout/pulldownviewtemplate" />
+        </LinearLayout>
+    </com.easylife.app_wash.widget.StickyLayout>
+
+</RelativeLayout>

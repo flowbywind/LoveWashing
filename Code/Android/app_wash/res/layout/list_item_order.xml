@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_main_content" >
+
+    <View
+        android:id="@+id/view0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_light" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view0"
+        android:layout_marginLeft="20dp"
+        android:padding="@dimen/layout_margin_short"
+        android:text="2015-06-15 23:01"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_score_small" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/date"
+        android:background="@color/line_light" />
+
+    <include
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        layout="@layout/include_detail" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/detail"
+        android:background="@color/line_light" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/view2" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:text="￥ 12x2"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_small" />
+
+    <TextView
+        android:id="@+id/totalmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/money"
+        android:layout_below="@+id/money"
+        android:text="实付：￥ 24"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_small" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/totalmoney"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/totalmoney"
+        android:text="共2件"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_small" />
+
+</RelativeLayout>

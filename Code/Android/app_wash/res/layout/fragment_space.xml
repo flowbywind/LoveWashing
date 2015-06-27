@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:background="@color/background_white" >
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="个人中心"
+            android:textColor="@color/fontcolor_dark"
+            android:textSize="@dimen/fontsize_big" />
+
+        <TextView
+            android:id="@+id/txt_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_title"
+            android:layout_centerHorizontal="true"
+            android:text="132****4161"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_score_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_light" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_end"
+        android:layout_below="@+id/layout_title" >
+
+        <RelativeLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/layout_content_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fontcolor_red"
+                android:paddingBottom="@dimen/height_small"
+                android:paddingLeft="@dimen/layout_margin_middle"
+                android:paddingRight="@dimen/layout_margin_middle"
+                android:paddingTop="@dimen/height_small" >
+
+                <RelativeLayout
+                    android:id="@+id/content_head1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/layout_margin_short"
+                    android:paddingTop="@dimen/layout_margin" >
+
+                    <TextView
+                        android:id="@+id/txt_sum_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="888,908,124.45"
+                        android:textColor="@color/fontcolor_white"
+                        android:textSize="@dimen/fontsize_money_big" />
+
+                    <TextView
+                        android:id="@+id/txt_money_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@+id/txt_sum_money"
+                        android:paddingLeft="@dimen/layout_margin_short"
+                        android:text="元"
+                        android:textColor="@color/line_light" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/content_head2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/content_head1"
+                    android:paddingBottom="@dimen/layout_margin" >
+
+                    <TextView
+                        android:id="@+id/txt_remark1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="账户总金额"
+                        android:textColor="@color/line_light"
+                        android:textSize="@dimen/fontsize_score_small" />
+
+                    <TextView
+                        android:id="@+id/txt_sure_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="查看交易记录>"
+                        android:textColor="@color/line_light"
+                        android:textSize="@dimen/fontsize_score_small" >
+                    </TextView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/content_center1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_content_head"
+                android:paddingTop="@dimen/layout_margin_middle"
+                android:weightSum="2" >
+
+                <TextView
+                    android:id="@+id/txt_sum_money1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:text="3124.00元"
+                    android:textColor="@color/fontcolor_dark"
+                    android:textSize="@dimen/fontsize_big" />
+
+                <TextView
+                    android:id="@+id/txt_money_unit1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/layout_margin_long"
+                    android:text="1244.34元"
+                    android:textColor="@color/fontcolor_dark"
+                    android:textSize="@dimen/fontsize_big" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_center2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/content_center1"
+                android:paddingBottom="@dimen/layout_margin_middle"
+                android:paddingTop="@dimen/layout_margin_short"
+                android:weightSum="2" >
+
+                <TextView
+                    android:id="@+id/txt_remark3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/layout_margin_middle"
+                    android:text="总收益"
+                    android:textColor="@color/fontcolor_light"
+                    android:textSize="@dimen/fontsize_score_small" />
+
+                <TextView
+                    android:id="@+id/txt_trustinfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/layout_margin_long"
+                    android:text="接收利息"
+                    android:textColor="@color/fontcolor_light"
+                    android:textSize="@dimen/fontsize_score_small" >
+                </TextView>
+            </LinearLayout>
+
+            <com.easylife.app_wash.widget.ListViewForScrollView
+                android:id="@+id/myList1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/content_center2"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/line_light"
+                android:dividerHeight="1dp"
+                android:footerDividersEnabled="false"
+                android:scrollbars="none" >
+            </com.easylife.app_wash.widget.ListViewForScrollView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/myList1"
+                android:background="@color/line_light"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_end"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_white"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/btninputmoney"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_big"
+            android:layout_weight="1"
+            android:background="@color/background_white"
+            android:text="充值"
+            android:textSize="@dimen/fontsize_score_big"
+            android:textColor="@color/fontcolor_light" />
+
+        <Button
+            android:id="@+id/btngetmoney"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_big"
+            android:layout_weight="1"
+            android:background="@color/background_white"
+            android:text="提现"
+            android:textSize="@dimen/fontsize_score_big"
+            android:textColor="@color/fontcolor_light" />
+    </LinearLayout>
+
+</RelativeLayout>

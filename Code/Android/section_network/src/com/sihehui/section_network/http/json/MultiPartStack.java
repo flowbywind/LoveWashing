@@ -2,6 +2,7 @@ package com.sihehui.section_network.http.json;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -10,6 +11,7 @@ import org.apache.commons.httpclient.params.HttpMethodParams;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -17,12 +19,12 @@ import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HTTP;
 
 import android.util.Log;
 
@@ -166,9 +168,7 @@ public class MultiPartStack extends HurlStack {
 		// Iterate the fileUploads
 		Map<String, Object> fileUpload = ((MultiPartRequest) request)
 				.getFileUploads();
-		// Log.d("shh", "fileUpload=" + fileUpload);
 		if (fileUpload != null) {
-			// Log.d("shh", "fileUpload.get()=" + fileUpload.get("avatarFile"));
 			if (fileUpload != null) {
 				Set<String> set = fileUpload.keySet();
 				for (Iterator<String> iterator = set.iterator(); iterator
@@ -191,56 +191,35 @@ public class MultiPartStack extends HurlStack {
 
 				}
 			}
-			// for (Map.Entry<String, File> entry : fileUpload.entrySet()) {
-			//
-			// builder.addPart(((String) entry.getKey()), new FileBody(
-			// (File) entry.getValue()));
-			// }
 		}
-		 ContentType contentType = ContentType.create(HTTP.CONTENT_ENCODING,
-		 HTTP.UTF_8);
 		// Iterate the stringUploads
 		Map<String, String> stringUpload = ((MultiPartRequest) request)
 				.getStringUploads();
-		// Log.d("shh",
-		// "stringUpload.get(userAccount)="
-		// + stringUpload.get("userAccout"));
-		// Set<String> set = stringUpload.keySet();
-		// for (Iterator<String> iterator = set.iterator(); iterator.hasNext();)
-		// {
-		// String key = (String) iterator.next();
-		// Object obj = stringUpload.get(key);
-		// Log.d("shh", "key=" + key);
-		// Log.d("shh", "obj=" + obj.toString());
-		// if (obj instanceof String) {
-		// builder.addTextBody(key, obj.toString(),
-		// ContentType.APPLICATION_JSON);
-		// } else if (obj instanceof File) {
-		// builder.addBinaryBody(key, (File) obj);
-		// } else if (obj instanceof File[]) {
-		// File[] files = (File[]) obj;
-		// for (int i = 0; i < files.length; i++) {
-		// builder.addBinaryBody(key, files[i]);
-		// }
-		// }
-		//
-		// }
 		if (stringUpload != null) {
-			for (Map.Entry<String, String> entry : stringUpload.entrySet()) {
-				Log.d("cxd", "stringUpload.entry.getKey()=" + entry.getKey()
-						+ "  entry.getValue()=" + entry.getValue());
-				try {
-					builder.addPart(((String) entry.getKey()), new StringBody(
-							(String) entry.getValue()));
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+			String json = stringUpload.get("value");
+			 Log.d("cxd", "jsonRequest=" + json);
+			try {
+				StringEntity entity = new StringEntity(json);
+				httpRequest.setEntity(entity);
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			// httpRequest.addHeader("contentType", "application/json");
-			httpRequest.setEntity(builder.build());
+			// for (Map.Entry<String, String> entry : stringUpload.entrySet()) {
+			// Log.d("cxd", "stringUpload.entry.getKey()=" + entry.getKey()
+			// + "  entry.getValue()=" + entry.getValue());
+			// try {
+			// builder.addPart(((String) entry.getKey()), new StringBody(
+			// (String) entry.getValue()));
+			// } catch (Exception e) {
+			// e.printStackTrace();
+			// }
+			// }
+			// Log.d("cxd", "builder.toString()=" + builder.toString());
+			// httpRequest.setEntity(builder.build());
+			// UrlEncodedFormEntity p_entity = new UrlEncodedFormEntity(pairs,
+			// "utf-8");
 
-			// httpRequest.getParams().setParameter(HTTP.CONTENT_ENCODING,
-			// HTTP.UTF_8);
 		}
 	}
 }

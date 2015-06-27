@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_title" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/layout_margin" >
+
+            <RelativeLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="用户名："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/txt_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text1"
+                    android:gravity="center|left"
+                    android:background="@color/background_white"
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <View
+                    android:id="@+id/lineview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_middle" />
+
+                <View
+                    android:id="@+id/lineview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_middle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/layout_content"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="真实姓名："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/txt_realname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text2"
+                    android:gravity="center|left"
+                    android:background="@color/background_white"
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/realname_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/layout_margin"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textColor="@color/fontcolor_skyblue"
+                    android:textSize="@dimen/fontsize_small" />
+
+                <View
+                    android:id="@+id/lineview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_middle" />
+
+                <View
+                    android:id="@+id/lineview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_middle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/layout_content1"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="身份证号："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/txt_idCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text3"
+                    android:gravity="center|left"
+                    android:background="@color/background_white"
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/idcard_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/layout_margin"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textColor="@color/fontcolor_skyblue"
+                    android:textSize="@dimen/fontsize_small" />
+
+                <View
+                    android:id="@+id/lineview5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_middle" />
+
+                <View
+                    android:id="@+id/lineview6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_middle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/layout_content2"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="性 别："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/txt_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text4"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:hint=""
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/gendar_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/layout_margin"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textColor="@color/fontcolor_skyblue"
+                    android:textSize="@dimen/fontsize_small" />
+
+                <View
+                    android:id="@+id/lineview7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_middle" />
+
+                <View
+                    android:id="@+id/lineview8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_middle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_content4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_below="@+id/layout_content3"
+                android:layout_marginTop="@dimen/layout_margin" >
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:text="出生日期："
+                    android:textColor="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/txt_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/text6"
+                    android:background="@color/background_white"
+                    android:gravity="center|left"
+                    android:hint=""
+                    android:textColorHint="@color/line_middle"
+                    android:textSize="@dimen/fontsize_middle" />
+
+                <TextView
+                    android:id="@+id/birthday_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/layout_margin"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textColor="@color/fontcolor_skyblue"
+                    android:textSize="@dimen/fontsize_small" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_middle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_middle" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

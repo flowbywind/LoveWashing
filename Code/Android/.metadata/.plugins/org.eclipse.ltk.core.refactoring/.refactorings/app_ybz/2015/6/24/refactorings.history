@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TabListFragment.java&apos; to &apos;app_wash/src/com.easylife.app_wash.view&apos;&#x0D;&#x0A;- Original project: &apos;app_ybz&apos;&#x0D;&#x0A;- Destination element: &apos;app_wash/src/com.easylife.app_wash.view&apos;&#x0D;&#x0A;- Original element: &apos;com.yunbizhi.app_ybz.view.TabListFragment.java&apos;" description="Copy compilation unit" destination="=app_wash/src&lt;com.easylife.app_wash.view" element1="/src&lt;com.yunbizhi.app_ybz.view{TabListFragment.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1434185363162" units="1" version="1.0"/>
+</session>

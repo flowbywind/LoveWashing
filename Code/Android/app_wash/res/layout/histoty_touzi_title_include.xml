@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_big_secondary"
+    android:background="@drawable/bg_kuang"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/relative_select"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_big_secondary"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/huankuan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big_secondary"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:gravity="center"
+            android:text="还款中"
+            android:textColor="@color/fontcolor_blue"
+            android:textSize="@dimen/fontsize_score_small" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1dp"
+        android:layout_height="@dimen/height_big_secondary" >
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/line_vertical_short" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_big_secondary"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/jiexin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big_secondary"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="已结清"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_score_small" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1dp"
+        android:layout_height="@dimen/height_big_secondary"
+        android:gravity="center" >
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/line_vertical_short" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_big_secondary"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/toubiao"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big_secondary"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_margin"
+            android:gravity="center"
+            android:text="投标中"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_score_small" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1dp"
+        android:layout_height="@dimen/height_big_secondary"
+        android:gravity="center" >
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/line_vertical_short" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_big_secondary"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/shibai"
+             android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big_secondary"
+            android:layout_marginRight="@dimen/layout_margin"
+            android:gravity="center"
+            android:text="未成功"
+            android:textColor="@color/fontcolor_light"
+            android:textSize="@dimen/fontsize_score_small" />
+    </RelativeLayout>
+
+</LinearLayout>

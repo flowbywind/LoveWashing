@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/layout_margin_short"
+        android:background="@drawable/btn_item_background_gray" >
+
+        <ImageView
+            android:id="@+id/company_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/layout_margin" />
+
+        <TextView
+            android:id="@+id/company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/company_icon"
+            android:layout_alignTop="@+id/company_icon"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:layout_marginRight="@dimen/layout_margin"
+            android:layout_toLeftOf="@+id/icon"
+            android:layout_toRightOf="@+id/company_icon"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/fontcolor_dark"
+            android:textSize="@dimen/fontsize_middle" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/company_icon"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/company_icon"
+            android:layout_marginRight="@dimen/layout_margin"
+            android:scaleType="center"
+            android:src="@drawable/btn" />
+         <View
+            android:id="@+id/view0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/company_icon"
+            android:layout_marginTop="@dimen/layout_margin_short"
+            android:background="@color/line_light" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/btn_item_background_gray" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/list_item_image_width"
+        android:layout_height="@dimen/list_item_image_height"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin_short"
+        android:layout_toRightOf="@+id/image"
+        android:singleLine="true"
+        android:textColor="@color/fontcolor_dark"
+        android:textSize="@dimen/fontsize_big" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/image"
+        android:singleLine="true"
+        android:textColor="@color/fontcolor_red"
+        android:textSize="@dimen/fontsize_middle" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/money"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_toRightOf="@+id/image"
+        android:singleLine="true"
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_small" />
+
+    <TextView
+        android:id="@+id/style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/type"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:layout_toRightOf="@+id/image"
+        android:singleLine="true"
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="12dp"
+        android:background="@color/line_light" />
+
+</RelativeLayout>

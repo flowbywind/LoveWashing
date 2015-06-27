@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fontcolor_white" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_header" >
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/layout0"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:layout_below="@+id/include_title"
+        android:layout_marginTop="@dimen/layout_margin" >
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="0dp"
+            android:background="@color/background_white"
+            android:drawablePadding="@dimen/layout_margin"
+            android:hint="@string/loginnamehint"
+            android:inputType="text"
+            android:paddingLeft="@dimen/layout_margin_middle"
+            android:textColorHint="@color/line_middle"
+            android:textSize="@dimen/fontsize_small" >
+        </EditText>
+
+        <View
+            android:id="@+id/lineview1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/line_light" >
+        </View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_light" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:layout_below="@+id/layout0"
+        android:layout_marginTop="@dimen/layout_margin" >
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:background="@color/background_white"
+            android:drawablePadding="@dimen/layout_margin"
+            android:hint="@string/loginpwdhint"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/layout_margin_middle"
+            android:textColorHint="@color/line_middle"
+            android:textSize="@dimen/fontsize_small" >
+        </EditText>
+
+        <View
+            android:id="@+id/lineview2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/line_light" >
+        </View>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_light" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/layout1"
+        android:background="@color/line_light" >
+    </View>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:layout_below="@+id/view1"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/layout_margin_middle"
+        android:layout_marginRight="@dimen/layout_margin_middle"
+        android:layout_marginTop="@dimen/layout_margin_middle"
+        android:background="@drawable/btn_red"
+        android:text="@string/loginbtn"
+        android:textColor="@color/fontcolor_white"
+        android:textSize="@dimen/fontsize_big" />
+
+    <TextView
+        android:id="@+id/findpsd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_middle"
+        android:layout_alignLeft="@+id/login"
+        android:layout_below="@+id/login"
+        android:layout_marginTop="@dimen/layout_margin_short"
+        android:gravity="left"
+        android:text="@string/forgetpwd"
+        android:textColor="@color/fontcolor_light"
+        android:textSize="@dimen/fontsize_middle" />
+
+    <Button
+        android:id="@+id/regist"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:layout_below="@+id/findpsd"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/layout_margin_middle"
+        android:layout_marginRight="@dimen/layout_margin_middle"
+        android:layout_marginTop="@dimen/layout_margin_long"
+        android:background="@drawable/btn_blue"
+        android:text="@string/registbtn"
+        android:textColor="@color/fontcolor_white"
+        android:textSize="@dimen/fontsize_big" />
+
+</RelativeLayout>

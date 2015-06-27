@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.sihehui.section_vo.vo.WashingVO.imageUrl&apos; in &apos;com.sihehui.section_vo.vo.WashingVO&apos;&#x0D;&#x0A;- Original project: &apos;section_vo&apos;&#x0D;&#x0A;- Original element: &apos;com.sihehui.section_vo.vo.WashingVO.imageUrl&apos;&#x0D;&#x0A;- Getter method name: &apos;getImageUrl&apos;&#x0D;&#x0A;- Setter method name: &apos;setImageUrl&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;imageUrl&apos;" flags="589830" getter="getImageUrl" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;com.sihehui.section_vo.vo{WashingVO.java[WashingVO^imageUrl" insertion="-1" setter="setImageUrl" stamp="1434183157975" version="1.0" visibility="1"/>
+</session>
