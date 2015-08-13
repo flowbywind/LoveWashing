@@ -69,7 +69,7 @@ public class TabListFragment extends BaseWashingFragment {
 		// input.put("tagId", type);
 		input.put("pageNumber", 1);
 		input.put("pageSize", 15);
-
+        input.put("tagId", 1);
 		// Map<String, String> params = new HashMap<String, String>();
 		// params.put("data", Util.map2Json(input));
 		// params.put("uid", (activity).mUser.getUid());
@@ -325,7 +325,7 @@ public class TabListFragment extends BaseWashingFragment {
 		viewHolder.name.setText(vo.getName());
 		viewHolder.discount.setText(vo.getDiscount());
 		viewHolder.money.setText(vo.getPrice());
-		viewHolder.pay_money.setText(vo.getSaveMoney());
+		viewHolder.pay_money.setText(vo.getSave_money());
 		viewHolder.addcart.setOnClickListener(new CustomOnClickListener(
 				mActivity) {
 
@@ -335,11 +335,11 @@ public class TabListFragment extends BaseWashingFragment {
 
 			}
 		});
-		if (vo.getGoodsPic() != null && !"".equals(vo.getGoodsPic())) {
+		if (vo.getGoods_pic() != null && !"".equals(vo.getGoods_pic())) {
 
 			// String url = BaseClientAPI.getStandardURL(mActivity,
 			// dataList.get(position).getGoodsPic());
-			String url = getDownLoadUrl(vo.getGoodsPic());
+			String url = getDownLoadUrl(vo.getGoods_pic());
 			Log.d("shh", "position=" + position + " url=" + url);
 			viewHolder.image.setTag(url);
 			Drawable drawable = asyncDrawableLoader.loadDrawable(url,

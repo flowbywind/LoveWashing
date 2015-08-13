@@ -12,7 +12,7 @@ public class Contacts {
 
 	public static final class ServiceURL {
 
-		public static final String QueryGoods = "Goods/QueryGoods?";// 首页商品列表
+		public static final String QueryGoods = "Goods/QueryGoods";// 首页商品列表
 
 		public static final String BannerService = "bannerAppService";// 首页轮播图片
 		public static final String CXD_AuthCode = "authCodeAppService";// 注册时获取验证码接口

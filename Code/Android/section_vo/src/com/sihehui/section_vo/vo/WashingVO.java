@@ -1,8 +1,8 @@
 package com.sihehui.section_vo.vo;
 
 public class WashingVO {
-	private String id, name, goodsPic, price, discount, discountPrice,
-			saveMoney, status, merchantId;
+	private String id, name, goods_pic, price, discount, discount_price,
+	save_money, status, tag_id,merchant_id;
 
 	public String getId() {
 		return id;
@@ -20,12 +20,12 @@ public class WashingVO {
 		this.name = name;
 	}
 
-	public String getGoodsPic() {
-		return goodsPic;
+	public String getGoods_pic() {
+		return goods_pic;
 	}
 
-	public void setGoodsPic(String goodsPic) {
-		this.goodsPic = goodsPic;
+	public void setGoods_pic(String goods_pic) {
+		this.goods_pic = goods_pic;
 	}
 
 	public String getPrice() {
@@ -44,20 +44,20 @@ public class WashingVO {
 		this.discount = discount;
 	}
 
-	public String getDiscountPrice() {
-		return discountPrice;
+	public String getDiscount_price() {
+		return discount_price;
 	}
 
-	public void setDiscountPrice(String discountPrice) {
-		this.discountPrice = discountPrice;
+	public void setDiscount_price(String discount_price) {
+		this.discount_price = discount_price;
 	}
 
-	public String getSaveMoney() {
-		return saveMoney;
+	public String getSave_money() {
+		return save_money;
 	}
 
-	public void setSaveMoney(String saveMoney) {
-		this.saveMoney = saveMoney;
+	public void setSave_money(String save_money) {
+		this.save_money = save_money;
 	}
 
 	public String getStatus() {
@@ -68,12 +68,22 @@ public class WashingVO {
 		this.status = status;
 	}
 
-	public String getMerchantId() {
-		return merchantId;
+	public String getTag_id() {
+		return tag_id;
 	}
 
-	public void setMerchantId(String merchantId) {
-		this.merchantId = merchantId;
+	public void setTag_id(String tag_id) {
+		this.tag_id = tag_id;
 	}
+
+	public String getMerchant_id() {
+		return merchant_id;
+	}
+
+	public void setMerchant_id(String merchant_id) {
+		this.merchant_id = merchant_id;
+	}
+
+	
 
 }

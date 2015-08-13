@@ -106,7 +106,7 @@ public class MultiPartStack extends HurlStack {
 			return new HttpDelete(request.getUrl());
 		case Method.POST: {
 			HttpPost postRequest = new HttpPost(request.getUrl());
-			postRequest.addHeader("contentType", "application/json");
+			postRequest.addHeader("content-Type", "application/json");
 			// postRequest.addHeader("contentType","application/x-www-form-urlencoded; charset=utf-8");
 
 			// postRequest.addHeader("charset", HTTP.UTF_8);
